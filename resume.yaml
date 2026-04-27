@@ -1,0 +1,89 @@
+cv:
+  name: PO-YEN TSENG
+  location: New Taipei City, Taiwan
+  email: prestontseng.work@gmail.com
+  social_networks:
+    - network: LinkedIn
+      username: prestontseng
+  sections:
+    about: 
+      - I'm a Full Stack Engineer with 5+ years of experience specializing in algorithm development, enterprise software solutions, and AI integration. Currently at LILEE Systems, I develop critical transportation algorithms including train timetable conflict detection and auto-generation systems that process full-day schedules in seconds. Previously, as AI Technical Lead at WeBIM Services, I built enterprise knowledge management and intelligent customer service systems using Azure AI and OpenAI GPT, reducing customer service workload by 86%. My background includes extensive full-stack development with modern technologies like Python (FastAPI), TypeScript (Vue, Angular), and cloud platforms, alongside expertise in BIM automation, 3D visualization, and CI/CD processes. I hold a Master's degree in Transportation Engineering from National Taiwan University and am Microsoft Azure AI Engineer certified, with published research in real-time indoor localization systems.
+    experience:
+      - company: LILEE Systems
+        position: Full Stack Engineer
+        start_date: 2024-05
+        end_date: present
+        location: New Taipei City, Taiwan
+        highlights:
+          - Designed and developed a train timetable conflict detection algorithm from scratch, capable of analyzing a full-day schedule within 1-3 seconds, identifying route conflicts, capacity shortages, and insufficient charging time risks in real time
+          - Built a timetable auto-generation algorithm from scratch, producing conflict-free schedules within a few seconds based on fleet size, time windows, passenger demand targets, and permitted routes
+          - Developed a front-end visualization tool to display the entire daily timetable with millisecond precision, including track topology, vehicle positions, expected battery levels, signal states, and conflict root causes
+          - Led the development of a Safety Server, integrating signals, vehicles, and timetables to handle dispatching, signal authorization requests, and vehicle movement authority issuance, ensuring safe and controlled train operations
+          - '**Skills**: Python (FastAPI, GraphQL, SQLAlchemy), TypeScript (D3.js, Anuglar, PrimeNG), MQTT, PostgreSQL, Docker'
+      - company: WeBIM Services
+        position: AI Technical Lead
+        date:
+        start_date: 2024-01
+        end_date: 2024-05
+        location: Taipei, Taiwan
+        highlights:
+          - Developed enterprise knowledge management system using Azure AI Service to digitize paper documents and improve document retrieval efficiency.
+          - Developed intelligent customer service system using OpenAI GPT to automatically respond to customer inquiries, reducing 86% of customer service workload.
+          - Researched and established micro-front-end architecture to allow Vue2 and Vue3 services to coexist during migration.
+          - '**Skills**: ASP.NET Core, TypeScript(Vue2, Vue3, Nuxt.js, Vuetify), MySQL, MongoDB, Azure AI, Semantic Kernel, Project Management, Docker'
+      - company: WeBIM Services
+        position: Full Stack Engineer
+        start_date: 2019-07
+        end_date: 2024-01
+        location: Taipei, Taiwan
+        highlights:
+          - Designed and developed attendance and approval modules for SyncoBox EIP.
+          - Established and maintained CI/CD processes and deployments on Azure.
+          - Designed and developed SyncoBox Automation to automate 100% of the inspection process of BIM models.
+          - Developed and maintained shared packages, permission logic, and microservice communication interfaces for the backend team to improve maintainability and reduce collaboration costs.
+          - Researched and utilized Nvidia Omniverse to develop high-quality rendering services.
+          - Developed the 3D model management module for SyncoBox digital design automation service.
+          - Implemented Autodesk Platform Service Viewer for 3D model rendering components.
+          - Developed SyncoBox Panorama to provide online panoramic services with offline access support.
+          - Refactored WeBIMSync and integrated it into SyncoBox services.
+          - Designed and developed SyncoBox Markups to reduce 50% of paper-based discussions in architectural design.
+          - Developed SyncoBox facility management service to improve factory maintenance efficiency by 40%.
+          - Created CCTV electronic fence and alarm system based on computer vision and BIM models to ensure worker safety.
+          - '**Skills**: ASP.NET Core, TypeScript(Vue2, Vue3, Nuxt.js, Vuetify), MySQL, MongoDB, Azure DevOps, Nvidia Omniverse, Docker'
+    Certifications & Languages:
+      - label: Certifications
+        details: "Microsoft Certified: Azure AI Engineer Associate"
+      - label: Languages
+        details: "Chinese (native), English (fluent, TOEFL: 93/120), Japanese (JLPT N2)"
+    education:
+      - institution: National Taiwan University
+        area: Transportation Engineering
+        degree: Master's degree
+        start_date: 2020
+        end_date: 2022
+        highlights:
+          - "GPA: 3.93/4.3"
+          - Real‐Time Indoor Localization with Visual SLAM for Emergency Responders, Automation in Construction, 2022
+          - Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS, SCEM International Conference, 2022
+      - institution: National Taiwan University
+        area: Civil Engineering
+        degree: Bachelor's degree
+        start_date: 2016
+        end_date: 2020
+        highlights:
+          - "GPA: 3.92/4.3"
+    publications:
+      - title: Real-time indoor localization with visual SLAM for in-building emergency response
+        authors:
+          - Po-Yen Tseng
+          - Jacob J. Lin
+          - Ying-Chieh Chan
+          - Albert Y. Chen
+        doi: 10.1016/j.autcon.2022.104319
+        url: https://www.sciencedirect.com/science/article/abs/pii/S0926580522001923
+        journal: Automation in Construction
+        date: 2022-05
+rendercv_settings:
+  date: "2025-09-29"
+  render_command:
+  bold_keywords: []
