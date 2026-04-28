@@ -6,23 +6,33 @@ cv:
     - network: LinkedIn
       username: prestontseng
   sections:
-    about: 
-      - I'm a Full Stack Engineer with 5+ years of experience specializing in algorithm development, enterprise software solutions, and AI integration. Currently at LILEE Systems, I develop critical transportation algorithms including train timetable conflict detection and auto-generation systems that process full-day schedules in seconds. Previously, as AI Technical Lead at WeBIM Services, I built enterprise knowledge management and intelligent customer service systems using Azure AI and OpenAI GPT, reducing customer service workload by 86%. My background includes extensive full-stack development with modern technologies like Python (FastAPI), TypeScript (Vue, Angular), and cloud platforms, alongside expertise in BIM automation, 3D visualization, and CI/CD processes. I hold a Master's degree in Transportation Engineering from National Taiwan University and am Microsoft Azure AI Engineer certified, with published research in real-time indoor localization systems.
+    about:
+      - Full-stack engineer working on safety-critical systems for autonomous rail transit. At LILEE Systems I own the Safety Server — the cloud platform's safety-critical control core, issuing movement authority and signal commands from the active timetable — and built the team's timetabling algorithms, breakdown-recovery automation, and cross-module observability tooling. Master's in Transportation Engineering from National Taiwan University; earlier roles spanned BIM automation and enterprise AI.
     experience:
       - company: LILEE Systems
-        position: Full Stack Engineer
-        start_date: 2024-05
+        position: Tech Lead
+        start_date: 2026-04
         end_date: present
         location: New Taipei City, Taiwan
         highlights:
-          - Designed and developed a train timetable conflict detection algorithm from scratch, capable of analyzing a full-day schedule within 1-3 seconds, identifying route conflicts, capacity shortages, and insufficient charging time risks in real time
-          - Built a timetable auto-generation algorithm from scratch, producing conflict-free schedules within a few seconds based on fleet size, time windows, passenger demand targets, and permitted routes
-          - Developed a front-end visualization tool to display the entire daily timetable with millisecond precision, including track topology, vehicle positions, expected battery levels, signal states, and conflict root causes
-          - Led the development of a Safety Server, integrating signals, vehicles, and timetables to handle dispatching, signal authorization requests, and vehicle movement authority issuance, ensuring safe and controlled train operations
-          - '**Skills**: Python (FastAPI, GraphQL, SQLAlchemy), TypeScript (D3.js, Anuglar, PrimeNG), MQTT, PostgreSQL, Docker'
+          - Lead a 3-5 person cloud team while continuing as primary IC on the Safety Server.
+          - Own architecture across the team's services — timetabling, mission management, safety control, observability.
+          - Partner with the CEO on H1/H2 roadmap and KPI planning.
+          - '**Skills**: Engineering Management, Hiring, Roadmap Planning, System Architecture'
+      - company: LILEE Systems
+        position: Full Stack Engineer
+        start_date: 2024-05
+        end_date: 2026-03
+        location: New Taipei City, Taiwan
+        highlights:
+          - Built the platform's train timetabling stack from scratch — full-day conflict detection (1-3s), auto-generation of conflict-free schedules from fleet/demand/route inputs, and a millisecond-precision visualization exposing track state, vehicle positions, signals, and conflict roots.
+          - Re-architected the Safety Server from a stateless service into a two-tier stateful system (Core Services + Mission Execution) with explicit mission FSM and Movement Authority lifecycle — turning silently-stuck missions into something the team can debug in seconds via Grafana.
+          - Designed Faramund, the platform's breakdown-recovery agent — a 28-state FSM that orchestrates the cloud services and field operators over WebSocket, replacing a multi-team manual workflow.
+          - Built seshat-go from scratch — a Go + TimescaleDB service that records MQTT traffic across the testbed and replays module state, making cross-module incidents debuggable for the entire team.
+          - Stood up Playwright E2E automation gated through Jenkins CI — the suite blocks image publishing on failure, catching regressions before they reach QA.
+          - '**Skills**: Python (FastAPI, GraphQL, SQLAlchemy, asyncio), TypeScript (D3.js, Angular, PrimeNG), Go, MQTT, PostgreSQL, TimescaleDB, Docker, Playwright, Jenkins, Grafana, FSM Design'
       - company: WeBIM Services
         position: AI Technical Lead
-        date:
         start_date: 2024-01
         end_date: 2024-05
         location: Taipei, Taiwan
@@ -84,6 +94,6 @@ cv:
         journal: Automation in Construction
         date: 2022-05
 rendercv_settings:
-  date: "2025-09-29"
+  date: "2026-04-27"
   render_command:
   bold_keywords: []
