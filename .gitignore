@@ -51,9 +51,6 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
-# Docker
-.dockerignore
-
 # Logs
 logs
 *.log

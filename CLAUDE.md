@@ -9,7 +9,7 @@ Generates a professional CV in multiple formats (PDF, HTML, Markdown, PNG, Typst
 ## Build Command
 
 ```bash
-./generate-resume.sh
+./script/generate-resume.sh
 ```
 
 This builds the Docker image (`resume-generator`), runs the container with the output directory mounted, and writes all generated files to `./output/`.
@@ -20,7 +20,7 @@ This builds the Docker image (`resume-generator`), runs the container with the o
 
 1. `resume.yaml` — all CV content (experience, education, skills, publications)
 2. `rendercv/settings.yaml` — RenderCV design/layout config (theme, fonts, page format, locale)
-3. `entrypoint.sh` — runs inside the container: merges the two YAML files into `merged_resume.yaml`, invokes `rendercv render`, copies the PDF to `/app/output`
+3. `script/entrypoint.sh` — runs inside the container: merges the two YAML files into `merged_resume.yaml`, invokes `rendercv render`, copies the PDF to `/app/output`
 4. `Dockerfile` — Python 3.11-slim + LaTeX packages + `rendercv[full]`
 
 **Custom theme templates** live in `rendercv/engineeringresumes/` (Typst/Jinja2, `.j2.typ`) and `rendercv/markdown/` (`.j2.md`). These override the default RenderCV `engineeringresumes` theme entry-by-entry.
@@ -33,8 +33,8 @@ This builds the Docker image (`resume-generator`), runs the container with the o
 | `rendercv/settings.yaml` | Design config: theme, fonts, margins, colors |
 | `rendercv/engineeringresumes/*.j2.typ` | Typst layout templates per entry type |
 | `rendercv/markdown/*.j2.md` | Markdown templates per entry type |
-| `entrypoint.sh` | YAML merge + rendercv invocation (runs in container) |
-| `generate-resume.sh` | Host-side Docker build + run wrapper |
+| `script/entrypoint.sh` | YAML merge + rendercv invocation (runs in container) |
+| `script/generate-resume.sh` | Host-side Docker build + run wrapper |
 
 ## Customization Patterns
 

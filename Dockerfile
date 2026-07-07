@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install RenderCV with full features
-RUN pip install "rendercv[full]"
+RUN pip install "rendercv[full]" click
 
 # Set working directory
 WORKDIR /app
@@ -19,6 +19,6 @@ COPY rendercv/ ./rendercv/
 
 
 # Copy executable script
-COPY entrypoint.sh .
+COPY script/entrypoint.sh .
 
 ENTRYPOINT ["./entrypoint.sh"]
