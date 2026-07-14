@@ -18,7 +18,10 @@ cv:
           - Lead a 3-5 person cloud team while continuing as primary IC on the Safety Server.
           - Own architecture across the team's services — timetabling, mission management, safety control, observability.
           - Partner with the CEO on H1/H2 roadmap and KPI planning.
-          - '**Skills**: Engineering Management, Hiring, Roadmap Planning, System Architecture'
+          - Built an internal agent-based product-operations workflow system for LILEE/TAPAS, connecting Confluence, Jira, Discord, local scripts, and reusable domain skills to standardize SafeART release planning, TAPAS feature specs, delivery-map maintenance, candidate review, and KPI reporting.
+          - Operationalized source-grounded Confluence/Jira workflows with live source-of-truth reads, durable task records, ADF validation, write-back controls, and post-write read-back verification, improving documentation governance and reducing stale planning artifacts.
+          - Designed agent-assisted interview and planning pipelines, including resume-to-final-interview review records that reduced HR coordination overhead by ~90%, and spec-to-delivery-map-to-half-year-roadmap flows that align engineering detail with stakeholder-facing release commitments.
+          - '**Skills**: Engineering Management, Hiring, Roadmap Planning, System Architecture, Agent-assisted Workflow Design, Confluence, Jira, Documentation Governance, Release Planning, KPI Reporting'
       - company: LILEE Systems
         position: Full Stack Engineer
         start_date: 2024-05
