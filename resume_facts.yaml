@@ -48,11 +48,18 @@ skills_inventory:
     - Jenkins
     - Azure DevOps
   ai_and_automation:
-    - Azure AI Service
-    - OpenAI GPT
-    - Semantic Kernel
-    - Agent-assisted workflow design
-    - Documentation governance
+    platforms_and_frameworks:
+      - Azure AI Service
+      - OpenAI GPT
+      - Semantic Kernel
+    agent_tools:
+      - Hermes Agent
+      - Claude Code
+      - Codex
+    capabilities:
+      - Agent-assisted workflow design
+      - Human-in-the-loop review workflows
+      - Source-grounded documentation governance
   testing_and_observability:
     - Playwright
     - Grafana
@@ -74,7 +81,7 @@ roles:
     start_date: 2026-04
     end_date: present
     location: New Taipei City, Taiwan
-    summary: Leads a 3-5 person cloud team while remaining primary IC on Safety Server and architecture across timetabling, mission management, safety control, and observability.
+    summary: Leads a 3-5 person cloud team, owns cross-service architecture decisions, partners with the CEO on roadmap/KPI planning, and operationalizes agent-assisted engineering workflows.
   - id: lilee-full-stack-engineer
     company: LILEE Systems
     title: Full Stack Engineer
@@ -99,13 +106,12 @@ roles:
 
 achievements:
   - id: lilee-tech-lead-team
-    title: Cloud team leadership and Safety Server ownership
+    title: Cloud team leadership and platform architecture
     role_id: lilee-tech-lead
     timeframe: 2026-04 to present
-    summary: Leads a small cloud engineering team while remaining primary IC on the Safety Server.
+    summary: Leads a small cloud engineering team and owns cross-service architecture and planning responsibilities.
     facts:
       - Leads a 3-5 person cloud team.
-      - Continues as primary IC on the Safety Server.
       - Owns architecture across timetabling, mission management, safety control, and observability services.
       - Partners with the CEO on H1/H2 roadmap and KPI planning.
     metrics:
@@ -129,8 +135,8 @@ achievements:
     boundaries:
       - Avoid presenting this short-tenure Tech Lead role as multi-year people-management experience.
     resume_bullets:
-      default: Lead a 3-5 person cloud team while continuing as primary IC on the Safety Server.
-      tech_lead: Lead a 3-5 engineer cloud team across timetabling, mission management, safety control, and observability while remaining primary IC for the Safety Server; drive architecture ownership and roadmap planning with executive stakeholders.
+      default: Lead a 3-5 person cloud team across timetabling, mission management, safety control, and observability services, owning cross-service architecture and roadmap execution.
+      tech_lead: Lead a 3-5 engineer cloud team, drive architecture decisions across the autonomous-rail cloud platform, and partner with executive stakeholders on roadmap and KPI planning.
 
   - id: lilee-ai-interview-pipeline
     title: Agent-assisted interview pipeline
@@ -150,7 +156,7 @@ achievements:
         - Which stages are fully automated versus human-reviewed.
         - Whether the 90% reduction is measured by time, message volume, meeting count, or subjective coordination load.
     technologies:
-      - Hermes
+      - Hermes Agent
       - Agent-assisted workflow design
       - Discord
       - Local scripts
@@ -187,7 +193,7 @@ achievements:
         - Number of specs, delivery maps, or roadmap cycles supported.
         - External stakeholder groups using the output.
     technologies:
-      - Hermes
+      - Hermes Agent
       - Confluence
       - Jira
       - Agent-assisted workflow design
@@ -226,7 +232,7 @@ achievements:
         - Reduction in stale planning artifacts.
         - Specific KPI reporting or release planning examples safe to disclose.
     technologies:
-      - Hermes
+      - Hermes Agent
       - Confluence
       - Jira
       - Discord
