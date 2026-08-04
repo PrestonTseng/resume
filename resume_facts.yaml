@@ -53,9 +53,25 @@ skills_inventory:
       - OpenAI GPT
       - Semantic Kernel
     agent_tools:
-      - Hermes Agent
-      - Claude Code
-      - Codex
+      - name: Hermes Agent
+        evidence_status: extensively_evidenced_in_lilee_tapas_workflows
+        evidenced_use:
+          - Product/spec planning
+          - Confluence/Jira governance
+          - Candidate evaluation and tracking
+          - Multi-profile agent operations
+        sources:
+          - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+      - name: Claude Code
+        evidence_status: integration_designed_live_work_usage_not_yet_confirmed
+        evidenced_use:
+          - Preferred coding backend in the TAPAS code-owning-agent design
+        sources:
+          - kb://plans/2026-06-13-leo-tapas-profile-setup-assets/claude-code-integration.md
+      - name: Codex
+        evidence_status: environment_authenticated_lilee_work_usage_not_yet_confirmed
+        sources:
+          - kb://plans/2026-07-19-leo-hermes-018-migration-dependency-check/status.md
     capabilities:
       - Agent-assisted workflow design
       - Human-in-the-loop review workflows
@@ -82,6 +98,15 @@ roles:
     end_date: present
     location: New Taipei City, Taiwan
     summary: Leads a 3-5 person cloud team, owns cross-service architecture decisions, partners with the CEO on roadmap/KPI planning, and operationalizes agent-assisted engineering workflows.
+    evidence_status: current_role_with_confirmed_planned_outcomes
+    planned_outcomes:
+      - Develop Stan into the primary owner of Safety Server, with Preston limited to major architecture review and escalation after ownership transfer.
+      - Govern signed-off SafeART 0.21-0.24 release baselines through PO, Tech Lead, and feature-owner agreement, with formal rebaseline for later scope changes.
+      - Complete the Next-gen TAPAS target architecture and migration plan, including service boundaries, data ownership, communication contracts, failure isolation, observability, and phased cutover.
+      - Complete an implementation-ready M1-M3 Dispatcher Workstation design package with developer-facing specifications and an external-facing explanation.
+    sources:
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/status.md
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/kpi-proposal.md
   - id: lilee-full-stack-engineer
     company: LILEE Systems
     title: Full Stack Engineer
@@ -114,6 +139,8 @@ achievements:
       - Leads a 3-5 person cloud team.
       - Owns architecture across timetabling, mission management, safety control, and observability services.
       - Partners with the CEO on H1/H2 roadmap and KPI planning.
+      - Defined an evidence-based ownership-transfer target in which Stan becomes Safety Server Primary Owner and Preston moves to architecture review and escalation.
+      - Defined release-governance expectations around signed-off baselines, committed dates, no committed feature drop, and formal rebaseline for later scope changes.
     metrics:
       confirmed:
         - name: team_size
@@ -134,6 +161,10 @@ achievements:
     public_safe: true
     boundaries:
       - Avoid presenting this short-tenure Tech Lead role as multi-year people-management experience.
+      - The ownership transfer, release outcomes, platform architecture, WSS/PLC redesign, and dispatcher design package are confirmed H2 objectives, not completed resume outcomes yet.
+    sources:
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/status.md
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/kpi-proposal.md
     resume_bullets:
       default: Lead a 3-5 person cloud team across timetabling, mission management, safety control, and observability services, owning cross-service architecture and roadmap execution.
       tech_lead: Lead a 3-5 engineer cloud team, drive architecture decisions across the autonomous-rail cloud platform, and partner with executive stakeholders on roadmap and KPI planning.
@@ -147,6 +178,10 @@ achievements:
       - Pipeline generates traceable review records from resume review through final interview.
       - Workflow reduces coordination overhead with HR.
       - Review artifacts are designed to be traceable and auditable.
+      - Resume evidence is compared against live hiring plans and role-specific JDs rather than a remembered generic rubric.
+      - The workflow separates observed evidence, inference, risk, recommendation, and follow-up questions.
+      - Stage gates cover resume review, HR screening, role-specific technical evaluation, and later decision records.
+      - Candidate tracking pages use structured scores, comments, source references, controlled write approval, and persisted-layout verification.
     metrics:
       confirmed:
         - name: hr_coordination_overhead_reduction
@@ -173,6 +208,10 @@ achievements:
     public_safe: true
     boundaries:
       - Emphasize human review and decision support; do not imply fully automated hiring decisions.
+      - Candidate-specific personal data and judgments remain in restricted task/tracking records, not reusable knowledge or public resume content.
+    sources:
+      - kb://knowledge/hiring/agent-assisted-candidate-evaluation
+      - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
     resume_bullets:
       default: Designed an agent-assisted interview pipeline from resume review through final interview, generating traceable review records and decision documents while reducing HR coordination overhead by approximately 90%.
       executive: Built a human-reviewed interview operating system that reduces HR coordination cost and makes hiring decisions traceable from resume screen through final interview.
@@ -186,6 +225,9 @@ achievements:
       - Converts detailed engineering specs into delivery maps.
       - Produces Gantt-style delivery views and half-year roadmap artifacts.
       - Aligns internal engineering detail with stakeholder-facing timeline and release commitments.
+      - Delivery Maps bridge feature/spec intent to release-aligned, delegable work organized by workstream, release order, dependencies, and ownership boundaries.
+      - Produced TSR Delivery Map updates, 2026 H2 KPI synchronization, a TSR Gantt generation script, and Mermaid Gantt assets with product/backend/frontend role coloring.
+      - Keeps Delivery Map, Jira hierarchy, due dates, release/KPI views, and source specs traceable to one another.
     metrics:
       confirmed: []
       needs_followup:
@@ -210,6 +252,10 @@ achievements:
     public_safe: true
     boundaries:
       - Do not disclose confidential roadmap content or unreleased product commitments.
+      - Do not infer missing tickets, owners, due dates, or release facts; preserve gaps until authoritative sources resolve them.
+    sources:
+      - kb://knowledge/product-operations/delivery-map-governance
+      - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
     resume_bullets:
       default: Built an AI-assisted planning workflow that converts engineering specs into delivery maps, Gantt timelines, and half-year roadmap artifacts, aligning detailed engineering execution with stakeholder-facing release commitments.
       executive: Turned engineering specs into stakeholder-facing roadmap and release-commitment artifacts, improving planning visibility across engineering and external teams.
@@ -225,8 +271,20 @@ achievements:
       - Maintains durable task records.
       - Uses ADF validation, write-back controls, and post-write read-back verification.
       - Standardizes release planning, feature specs, delivery-map maintenance, candidate review, and KPI reporting.
+      - Preserves untouched ADF nodes, table attributes, media, links, mentions, status controls, and extension nodes through surgical edits.
+      - Verifies persisted semantic content and structural invariants after write-back instead of treating an API success response as completion.
+      - Visible records show 8 LILEE/TAPAS-specific skills, about 40 related durable task directories, and at least 7 standardized Confluence/Jira automation workflows as of the 2026-07-07 audit.
     metrics:
-      confirmed: []
+      confirmed:
+        - name: lilee_tapas_specific_skills
+          value: 8
+          basis: visible active-profile inventory as of 2026-07-07
+        - name: related_durable_task_directories
+          value: approximately 40
+          basis: visible task-record audit as of 2026-07-07
+        - name: major_confluence_jira_workflows
+          value: at least 7
+          basis: visible workflow audit as of 2026-07-07
       needs_followup:
         - Number of Confluence/Jira artifacts maintained.
         - Reduction in stale planning artifacts.
@@ -252,6 +310,11 @@ achievements:
     boundaries:
       - Avoid excessive internal product names unless the target audience understands them.
       - Do not disclose private Confluence/Jira content.
+      - Treat the scale counts as a dated visible-record audit, not exhaustive lifetime totals.
+    sources:
+      - kb://knowledge/product-operations/source-grounded-atlassian-writeback
+      - kb://knowledge/product-operations/delivery-map-governance
+      - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
     resume_bullets:
       default: Operationalized source-grounded Confluence/Jira workflows with live source-of-truth reads, durable task records, write-back validation, and post-write verification, reducing stale planning artifacts and improving documentation governance.
       concise: Integrated Confluence, Jira, Discord, local scripts, and reusable domain skills into agent-based product-operations workflows for release planning, candidate review, KPI reporting, and documentation governance.
@@ -266,6 +329,7 @@ achievements:
       - Full-day conflict detection runs in 1-3 seconds.
       - Generates conflict-free schedules from fleet, demand, and route inputs.
       - Provides millisecond-precision visualization of track state, vehicle positions, signals, and conflict root causes.
+      - SafeART 0.20 release evidence reports high-confidence automated regression coverage for timetable CRUD, service CRUD, conflict detection, audit flow, and TSV simulation.
     metrics:
       confirmed:
         - name: conflict_detection_runtime
@@ -291,6 +355,9 @@ achievements:
     public_safe: true
     boundaries:
       - Do not imply safety certification or final field enforcement unless explicitly confirmed.
+      - The release evidence confirms covered workflows but does not establish the benchmark scale behind the 1-3 second runtime.
+    sources:
+      - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
     resume_bullets:
       default: Built the platform's train timetabling stack from scratch, including full-day conflict detection in 1-3 seconds, conflict-free schedule generation from fleet/demand/route inputs, and millisecond-level visualization of track state, vehicle positions, signals, and conflict root causes.
       platform: Built train timetabling from scratch, aligning scheduling algorithms, route constraints, and operator-facing visualization into a core autonomous-rail planning capability.
@@ -305,14 +372,17 @@ achievements:
       - Architecture separates Core Services and Mission Execution.
       - Introduced explicit mission FSM and Movement Authority lifecycle.
       - Made silently stuck missions debuggable in seconds via Grafana.
+      - Safety Server route-request ordering changes selection logic inside Safety Server; it does not change WSS/PLC authorization behavior or preempt an already authorized route.
+      - For TSR/Form A/Form B, Safety Server owns the operational golden copy, timer-driven state transitions, validation, and Movement Authority integration, while JPS is the dispatcher API gateway and long-term history/audit persistence layer.
+      - The WSS agent subscribes to Safety Server route/door commands over MQTT, translates them into Modbus register state for PLC/IXL, and applies failsafe marking when commands stop arriving.
+      - ADS receives Movement Authority commands from Safety Server over WebSocket and returns MA acknowledgements; the existing MA payload remains the vehicle-facing contract for TSR/Form A/Form B.
     metrics:
       confirmed:
         - name: stuck_mission_debuggability
           value: debuggable in seconds via Grafana
       needs_followup:
         - Previous stuck-mission diagnosis time.
-        - Production/testbed/simulation deployment boundary.
-        - Safety Server command boundary versus field controller, wayside, and vehicle enforcement.
+        - Which parts of the Safety Server architecture and command path are deployed in production, field trial, Alpha/pre-alpha, testbed, or simulation.
         - Audit log, rollback, manual override, timeout, and idempotency details safe to disclose.
     technologies:
       - Python
@@ -335,7 +405,13 @@ achievements:
     public_safe: true
     boundaries:
       - Use boundary language such as within LILEE's cloud control platform.
-      - Do not overstate final safety enforcement beyond confirmed system responsibility.
+      - Safety Server owns cloud-side mission selection, operational restriction state, and Movement Authority integration; WSS/PLC remains a separate authorization and field-control boundary.
+      - ADS/vehicle-side software consumes and acknowledges MA; do not imply that Safety Server alone provides final field or onboard enforcement.
+    sources:
+      - kb://plans/2026-06-08-leo-po-example-from-n4bi4q/plan.md
+      - kb://plans/2026-07-14-leo-tsr-ws6-ticket-audit/spec_page_text.md
+      - kb://plans/2026-07-08-leo-wss-agent-architecture/wss-agent-architecture.md
+      - kb://plans/2026-07-23-leo-tapas-testbed-mock-ads-triops/spec-v2.md
     resume_bullets:
       default: Re-architected the Safety Server from a stateless service into a two-tier stateful system with explicit mission FSM and Movement Authority lifecycle, turning silently stuck missions into Grafana-traceable incidents debuggable within seconds.
       safety_boundary: Re-architected the Safety Server within LILEE's cloud control platform into a stateful Core Services + Mission Execution architecture with explicit mission FSM, Movement Authority lifecycle, and observable command-state transitions.
@@ -350,6 +426,7 @@ achievements:
       - Uses a 28-state FSM.
       - Orchestrates cloud services and field operators over WebSocket.
       - Replaces a multi-team manual workflow.
+      - Owns DOM 10 recovery in the documented mission-ordering context, where recovery traffic is distinguished from normal dispatch and return-to-yard intent.
     metrics:
       confirmed:
         - name: fsm_state_count
@@ -374,6 +451,8 @@ achievements:
     public_safe: true
     boundaries:
       - Present as operator-guided/human-in-the-loop if final human approval remains part of the process.
+    sources:
+      - kb://plans/2026-06-04-leo-faramund-dispatch-rules/plan.md
     resume_bullets:
       default: Designed Faramund, a 28-state breakdown-recovery FSM coordinating cloud services and field operators over WebSocket, replacing a multi-team manual workflow with an observable recovery process.
       executive: Converted a manual multi-team breakdown-recovery workflow into a repeatable, operator-guided system with explicit states and failure handling.
@@ -385,14 +464,18 @@ achievements:
     summary: Built a Go + TimescaleDB service to record MQTT traffic and replay module state for cross-module incident debugging.
     facts:
       - Built seshat-go from scratch.
-      - Service records MQTT traffic across the testbed.
-      - Uses Go and TimescaleDB.
-      - Replays module state for historical incident analysis.
+      - The Go backend and React frontend PoC records configurable MQTT topics into PostgreSQL/TimescaleDB as raw JSONB with compression and retention policies.
+      - Its source snapshot states that it subscribes to all MQTT topics and supports ICD message types 1 through 19.
+      - Provides time-range/topic queries, payload-field filtering, multi-topic comparison, and track-map/state replay for historical incident analysis.
       - Makes cross-module incidents debuggable for the team.
+      - Operates as an observer and is not a TAPAS runtime dependency or part of the operational control path.
     metrics:
-      confirmed: []
+      confirmed:
+        - name: known_icd_message_type_scope
+          value: types 1 through 19
+          basis: Seshat source snapshot and Seshat 2.0 terminology
       needs_followup:
-        - MQTT topic count, message throughput, retention period, and storage volume.
+        - Exact MQTT topic count, message throughput, retention period, and storage volume in the deployed PoC.
         - Debug time or MTTR improvement.
         - Number of modules covered.
     technologies:
@@ -413,6 +496,11 @@ achievements:
     public_safe: true
     boundaries:
       - Current source states testbed traffic; do not imply production unless confirmed.
+      - Seshat observes and analyzes MQTT traffic; it has no runtime authority over SS, JPS, MMS, WSS, ADS, or TriOps.
+      - ICD type range does not equal the exact number of actively captured MQTT topics.
+    sources:
+      - kb://plans/2026-07-02-leo-seshat-spec/page-snapshot.md
+      - kb://plans/2026-07-02-leo-seshat-spec/seshat-2.0-draft-v1.md
     resume_bullets:
       default: Built seshat-go, a Go + TimescaleDB service that records MQTT traffic across the testbed and replays module state, enabling engineers to reconstruct and debug cross-module incidents.
       reliability: Built MQTT recording/replay infrastructure that lets engineers reconstruct cross-module incidents without relying on live reproduction.
@@ -427,10 +515,14 @@ achievements:
       - Integrated the suite with Jenkins CI.
       - CI blocks image publishing when the suite fails.
       - Catches regressions before they reach QA.
+      - A June 2026 SafeART release evidence set records 86 passed automated cases spanning timetable/service CRUD, conflict detection, audit, realtime vehicle/track/signal/conflict views, manual mode, cross-day handling, severity events, DOM, vehicle management, and user management.
     metrics:
-      confirmed: []
+      confirmed:
+        - name: release_evidence_passed_automated_cases
+          value: 86
+          basis: live SafeART 0.20 release-note evidence summarized on 2026-06-25
       needs_followup:
-        - Number of tests and covered workflows.
+        - Number of tests authored or directly owned by Preston versus the broader release suite.
         - Regression count caught before QA.
         - Release frequency or image-publishing impact.
     technologies:
@@ -448,7 +540,11 @@ achievements:
       - Full Stack Engineer
       - Platform Engineer
     public_safe: true
-    boundaries: []
+    boundaries:
+      - The 86-case figure describes the broader release evidence set; do not claim Preston personally authored or owned all 86 without confirmation.
+    sources:
+      - kb://plans/2026-06-25-leo-safeart-020-qa-decision-summary/status.md
+      - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
     resume_bullets:
       default: Implemented Playwright end-to-end tests integrated with Jenkins CI, blocking image publishing on regression failures and reducing the risk of defects reaching QA environments.
       concise: Stood up Playwright E2E automation gated through Jenkins CI, blocking regression-prone image publishing before QA.
