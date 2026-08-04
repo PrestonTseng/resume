@@ -63,15 +63,21 @@ skills_inventory:
         sources:
           - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
       - name: Claude Code
-        evidence_status: integration_designed_live_work_usage_not_yet_confirmed
+        evidence_status: user_confirmed_pre_hermes_development_tool
         evidenced_use:
-          - Preferred coding backend in the TAPAS code-owning-agent design
+          - Development work before adopting Hermes Agent
+          - Developed and validated reusable engineering skills and workflows that were later migrated into Hermes
         sources:
           - kb://plans/2026-06-13-leo-tapas-profile-setup-assets/claude-code-integration.md
+          - direct_user_confirmation:2026-08-04
       - name: Codex
-        evidence_status: environment_authenticated_lilee_work_usage_not_yet_confirmed
+        evidence_status: user_confirmed_pre_hermes_development_tool
+        evidenced_use:
+          - Development work before adopting Hermes Agent
+          - Developed and validated reusable engineering skills and workflows that were later migrated into Hermes
         sources:
           - kb://plans/2026-07-19-leo-hermes-018-migration-dependency-check/status.md
+          - direct_user_confirmation:2026-08-04
     capabilities:
       - Agent-assisted workflow design
       - Human-in-the-loop review workflows
@@ -182,14 +188,16 @@ achievements:
       - The workflow separates observed evidence, inference, risk, recommendation, and follow-up questions.
       - Stage gates cover resume review, HR screening, role-specific technical evaluation, and later decision records.
       - Candidate tracking pages use structured scores, comments, source references, controlled write approval, and persisted-layout verification.
+      - Before the workflow, HR maintained shared PowerPoint candidate data and Excel scores; interviewers sent materials to Preston, who had to review, update both files at each stage, and send them back.
+      - The current workflow lets the agent update version-controlled Confluence records automatically, leaving email notification and human review/advancement as the coordination path.
+      - The workflow has processed 13 candidates.
     metrics:
       confirmed:
         - name: hr_coordination_overhead_reduction
           value: approximately 90%
-      needs_followup:
-        - Number of candidates processed through the pipeline.
-        - Which stages are fully automated versus human-reviewed.
-        - Whether the 90% reduction is measured by time, message volume, meeting count, or subjective coordination load.
+          basis: user estimate from replacing repeated PowerPoint/Excel updates and file exchanges with agent-maintained Confluence records and email notification
+        - name: candidates_processed
+          value: 13
     technologies:
       - Hermes Agent
       - Agent-assisted workflow design
@@ -209,11 +217,13 @@ achievements:
     boundaries:
       - Emphasize human review and decision support; do not imply fully automated hiring decisions.
       - Candidate-specific personal data and judgments remain in restricted task/tracking records, not reusable knowledge or public resume content.
+      - The approximately 90% figure is a workflow-overhead estimate, not a time-tracked controlled measurement.
     sources:
       - kb://knowledge/hiring/agent-assisted-candidate-evaluation
       - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+      - direct_user_confirmation:2026-08-04
     resume_bullets:
-      default: Designed an agent-assisted interview pipeline from resume review through final interview, generating traceable review records and decision documents while reducing HR coordination overhead by approximately 90%.
+      default: Designed a human-reviewed agent-assisted interview pipeline used for 13 candidates, replacing repeated PowerPoint/Excel handoffs with version-controlled Confluence records and reducing estimated HR coordination overhead by approximately 90%.
       executive: Built a human-reviewed interview operating system that reduces HR coordination cost and makes hiring decisions traceable from resume screen through final interview.
 
   - id: lilee-ai-spec-roadmap-flow
@@ -330,13 +340,18 @@ achievements:
       - Generates conflict-free schedules from fleet, demand, and route inputs.
       - Provides millisecond-precision visualization of track state, vehicle positions, signals, and conflict root causes.
       - SafeART 0.20 release evidence reports high-confidence automated regression coverage for timetable CRUD, service CRUD, conflict detection, audit flow, and TSV simulation.
+      - The testbed has run a recurring weekend timetable containing 1,351 services over a 02:00-23:30 daily operating horizon for several months.
     metrics:
       confirmed:
         - name: conflict_detection_runtime
           value: 1-3 seconds
+        - name: recurring_weekend_testbed_services
+          value: 1351 services
+          basis: recurring weekend timetable, 02:00-23:30 daily operating horizon, run for several months
+        - name: deployment_scope
+          value: testbed
       needs_followup:
-        - Benchmark scale: trains, routes, stations, track segments, and time horizon.
-        - Whether the schedule generation is production, testbed, or simulation use.
+        - Route, station, track, and track-segment counts from the exact Thalos const-data baseline used by the benchmark.
     technologies:
       - Python
       - TypeScript
@@ -358,6 +373,7 @@ achievements:
       - The release evidence confirms covered workflows but does not establish the benchmark scale behind the 1-3 second runtime.
     sources:
       - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
+      - direct_user_confirmation:2026-08-04
     resume_bullets:
       default: Built the platform's train timetabling stack from scratch, including full-day conflict detection in 1-3 seconds, conflict-free schedule generation from fleet/demand/route inputs, and millisecond-level visualization of track state, vehicle positions, signals, and conflict root causes.
       platform: Built train timetabling from scratch, aligning scheduling algorithms, route constraints, and operator-facing visualization into a core autonomous-rail planning capability.
@@ -376,13 +392,16 @@ achievements:
       - For TSR/Form A/Form B, Safety Server owns the operational golden copy, timer-driven state transitions, validation, and Movement Authority integration, while JPS is the dispatcher API gateway and long-term history/audit persistence layer.
       - The WSS agent subscribes to Safety Server route/door commands over MQTT, translates them into Modbus register state for PLC/IXL, and applies failsafe marking when commands stop arriving.
       - ADS receives Movement Authority commands from Safety Server over WebSocket and returns MA acknowledgements; the existing MA payload remains the vehicle-facing contract for TSR/Form A/Form B.
+      - The architecture is used in Alpha and pre-alpha testbeds.
+      - Before the observability/state-management improvement, a stuck mission could remain blocked and eventually fail.
     metrics:
       confirmed:
         - name: stuck_mission_debuggability
           value: debuggable in seconds via Grafana
+        - name: deployment_scope
+          value: Alpha and pre-alpha testbeds
       needs_followup:
-        - Previous stuck-mission diagnosis time.
-        - Which parts of the Safety Server architecture and command path are deployed in production, field trial, Alpha/pre-alpha, testbed, or simulation.
+        - Quantitative diagnosis or recovery time before and after the architecture change, if available.
         - Audit log, rollback, manual override, timeout, and idempotency details safe to disclose.
     technologies:
       - Python
@@ -412,6 +431,7 @@ achievements:
       - kb://plans/2026-07-14-leo-tsr-ws6-ticket-audit/spec_page_text.md
       - kb://plans/2026-07-08-leo-wss-agent-architecture/wss-agent-architecture.md
       - kb://plans/2026-07-23-leo-tapas-testbed-mock-ads-triops/spec-v2.md
+      - direct_user_confirmation:2026-08-04
     resume_bullets:
       default: Re-architected the Safety Server from a stateless service into a two-tier stateful system with explicit mission FSM and Movement Authority lifecycle, turning silently stuck missions into Grafana-traceable incidents debuggable within seconds.
       safety_boundary: Re-architected the Safety Server within LILEE's cloud control platform into a stateful Core Services + Mission Execution architecture with explicit mission FSM, Movement Authority lifecycle, and observable command-state transitions.
@@ -425,16 +445,21 @@ achievements:
       - Designed Faramund, the platform's breakdown-recovery agent.
       - Uses a 28-state FSM.
       - Orchestrates cloud services and field operators over WebSocket.
-      - Replaces a multi-team manual workflow.
+      - Replaced a testbed recovery model that required one person to monitor operations continuously, 24 hours a day.
+      - After the change, the testbed can automatically clear recovery conditions without operator approval.
       - Owns DOM 10 recovery in the documented mission-ordering context, where recovery traffic is distinguished from normal dispatch and return-to-yard intent.
     metrics:
       confirmed:
         - name: fsm_state_count
           value: 28 states
+        - name: continuous_human_monitoring_before
+          value: one person, 24 hours per day
+        - name: operator_approval_required_after
+          value: false
+        - name: deployment_scope
+          value: testbed
       needs_followup:
-        - Manual recovery duration before and after Faramund.
-        - Number of teams/operators involved.
-        - Production/testbed/simulation usage boundary.
+        - Frequency of recovery events and avoided manual interventions, if tracked.
     technologies:
       - WebSocket
       - FSM design
@@ -450,12 +475,13 @@ achievements:
       - Full Stack Engineer
     public_safe: true
     boundaries:
-      - Present as operator-guided/human-in-the-loop if final human approval remains part of the process.
+      - This is testbed recovery automation and does not require operator approval; do not imply production deployment.
     sources:
       - kb://plans/2026-06-04-leo-faramund-dispatch-rules/plan.md
+      - direct_user_confirmation:2026-08-04
     resume_bullets:
-      default: Designed Faramund, a 28-state breakdown-recovery FSM coordinating cloud services and field operators over WebSocket, replacing a multi-team manual workflow with an observable recovery process.
-      executive: Converted a manual multi-team breakdown-recovery workflow into a repeatable, operator-guided system with explicit states and failure handling.
+      default: Designed Faramund, a 28-state breakdown-recovery FSM that automatically clears testbed recovery conditions over WebSocket, eliminating the need for continuous 24-hour human monitoring.
+      executive: Converted continuously monitored testbed recovery into an autonomous, observable 28-state workflow with explicit failure handling.
 
   - id: lilee-seshat-go
     title: seshat-go MQTT recording and replay service
@@ -474,8 +500,20 @@ achievements:
         - name: known_icd_message_type_scope
           value: types 1 through 19
           basis: Seshat source snapshot and Seshat 2.0 terminology
+        - name: captured_mqtt_topics
+          value: 14 topics
+        - name: retention_period
+          value: 14 days
+        - name: storage_capacity_for_retention_window
+          value: approximately 300 GB
+          basis: 300 GB is approximately full after 14 days
+      derived_estimates:
+        - name: average_storage_growth
+          value: approximately 21.4 GB/day
+          calculation: 300 GB / 14 days
+          boundary: Storage growth estimate; not a measured MQTT network throughput rate and may include database/index overhead.
       needs_followup:
-        - Exact MQTT topic count, message throughput, retention period, and storage volume in the deployed PoC.
+        - Measured MQTT message throughput, if available.
         - Debug time or MTTR improvement.
         - Number of modules covered.
     technologies:
@@ -498,33 +536,41 @@ achievements:
       - Current source states testbed traffic; do not imply production unless confirmed.
       - Seshat observes and analyzes MQTT traffic; it has no runtime authority over SS, JPS, MMS, WSS, ADS, or TriOps.
       - ICD type range does not equal the exact number of actively captured MQTT topics.
+      - The 21.4 GB/day figure is derived from storage capacity and retention, not a measured broker throughput value.
     sources:
       - kb://plans/2026-07-02-leo-seshat-spec/page-snapshot.md
       - kb://plans/2026-07-02-leo-seshat-spec/seshat-2.0-draft-v1.md
+      - direct_user_confirmation:2026-08-04
     resume_bullets:
-      default: Built seshat-go, a Go + TimescaleDB service that records MQTT traffic across the testbed and replays module state, enabling engineers to reconstruct and debug cross-module incidents.
+      default: Built seshat-go, a Go + TimescaleDB service recording 14 MQTT topics across a 14-day, approximately 300 GB testbed history window, enabling engineers to replay module state and reconstruct cross-module incidents.
       reliability: Built MQTT recording/replay infrastructure that lets engineers reconstruct cross-module incidents without relying on live reproduction.
 
   - id: lilee-playwright-jenkins
-    title: Playwright E2E automation gated through Jenkins CI
+    title: Release-gated E2E CI pipeline and test-plan governance
     role_id: lilee-full-stack-engineer
     timeframe: 2024-05 to 2026-03
-    summary: Built E2E automation that gates image publishing on test failures.
+    summary: Built the release-gated Playwright/Jenkins pipeline from scratch and governed a team-accumulated regression plan, while a team member implemented the test automation.
     facts:
-      - Stood up Playwright E2E automation.
-      - Integrated the suite with Jenkins CI.
+      - Built the Playwright/Jenkins release pipeline from scratch.
       - CI blocks image publishing when the suite fails.
       - Catches regressions before they reach QA.
+      - Team members accumulated the 86 test cases across releases; Preston reviewed and curated them into the test plan, and Lorenzo later implemented the automation.
+      - The suite runs after every release build.
+      - During initial adoption, each build typically exposed one or two bugs; after about one month, findings became rare as developers began testing before pushing code.
       - A June 2026 SafeART release evidence set records 86 passed automated cases spanning timetable/service CRUD, conflict detection, audit, realtime vehicle/track/signal/conflict views, manual mode, cross-day handling, severity events, DOM, vehicle management, and user management.
     metrics:
       confirmed:
         - name: release_evidence_passed_automated_cases
           value: 86
           basis: live SafeART 0.20 release-note evidence summarized on 2026-06-25
-      needs_followup:
-        - Number of tests authored or directly owned by Preston versus the broader release suite.
-        - Regression count caught before QA.
-        - Release frequency or image-publishing impact.
+        - name: initial_regressions_caught_per_build
+          value: 1-2 bugs
+          basis: typical result during initial adoption
+        - name: gate_frequency
+          value: every release build
+        - name: later_regression_trend
+          value: findings became rare after approximately one month
+          basis: developers adopted pre-push testing
     technologies:
       - Playwright
       - Jenkins
@@ -541,13 +587,14 @@ achievements:
       - Platform Engineer
     public_safe: true
     boundaries:
-      - The 86-case figure describes the broader release evidence set; do not claim Preston personally authored or owned all 86 without confirmation.
+      - The 86 cases were accumulated by team members and later automated by Lorenzo; Preston's contribution was pipeline creation, test review/curation, and quality-gate governance.
     sources:
       - kb://plans/2026-06-25-leo-safeart-020-qa-decision-summary/status.md
       - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
+      - direct_user_confirmation:2026-08-04
     resume_bullets:
-      default: Implemented Playwright end-to-end tests integrated with Jenkins CI, blocking image publishing on regression failures and reducing the risk of defects reaching QA environments.
-      concise: Stood up Playwright E2E automation gated through Jenkins CI, blocking regression-prone image publishing before QA.
+      default: Built a release-gated Playwright/Jenkins pipeline from scratch and governed a team-authored 86-case regression plan; the gate initially caught 1-2 bugs per build and helped establish pre-push developer testing, making later release findings rare within about a month.
+      concise: Built a release-gated Playwright/Jenkins pipeline and governed an 86-case team regression plan, blocking failed builds before QA.
 
   - id: webim-knowledge-management
     title: Enterprise knowledge management with Azure AI
