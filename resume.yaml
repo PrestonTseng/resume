@@ -7,7 +7,22 @@ cv:
       username: prestontseng
   sections:
     about:
-      - Full-stack engineer working on safety-critical systems for autonomous rail transit. At LILEE Systems I own the Safety Server — the cloud platform's safety-critical control core, issuing movement authority and signal commands from the active timetable — and built the team's timetabling algorithms, breakdown-recovery automation, and cross-module observability tooling. Master's in Transportation Engineering from National Taiwan University; earlier roles spanned BIM automation and enterprise AI.
+      - Tech Lead and full-stack platform engineer with 7+ years building cloud systems for autonomous rail and enterprise automation. Lead a 3-5 engineer team across architecture, roadmap/KPI planning, and agent-assisted operations; hands-on in Python, TypeScript, Go, stateful mission execution, timetabling, observability, and CI quality gates.
+    technical_skills:
+      - label: Languages
+        details: Python, TypeScript, Go, C#
+      - label: Backend
+        details: FastAPI, GraphQL, SQLAlchemy, asyncio, ASP.NET Core
+      - label: Frontend
+        details: Angular, Vue, Nuxt.js, D3.js, PrimeNG, Vuetify
+      - label: Data & Infrastructure
+        details: PostgreSQL, TimescaleDB, MySQL, MongoDB, MQTT, Docker, Jenkins, Azure DevOps
+      - label: Testing & Observability
+        details: Playwright, Grafana, CI/CD, E2E automation, event recording and replay
+      - label: AI & Automation
+        details: Azure AI Service, OpenAI GPT, Semantic Kernel, agent-assisted workflow design
+      - label: Domains
+        details: Autonomous rail systems, timetabling, mission execution, FSM design, BIM automation
     experience:
       - company: LILEE Systems
         position: Tech Lead
@@ -15,54 +30,41 @@ cv:
         end_date: present
         location: New Taipei City, Taiwan
         highlights:
-          - Lead a 3-5 person cloud team while continuing as primary IC on the Safety Server.
-          - Own architecture across the team's services — timetabling, mission management, safety control, observability.
-          - Partner with the CEO on H1/H2 roadmap and KPI planning.
-          - Built an internal agent-based product-operations workflow system for LILEE/TAPAS, connecting Confluence, Jira, Discord, local scripts, and reusable domain skills to standardize SafeART release planning, TAPAS feature specs, delivery-map maintenance, candidate review, and KPI reporting.
-          - Operationalized source-grounded Confluence/Jira workflows with live source-of-truth reads, durable task records, ADF validation, write-back controls, and post-write read-back verification, improving documentation governance and reducing stale planning artifacts.
-          - Designed agent-assisted interview and planning pipelines, including resume-to-final-interview review records that reduced HR coordination overhead by ~90%, and spec-to-delivery-map-to-half-year-roadmap flows that align engineering detail with stakeholder-facing release commitments.
-          - '**Skills**: Engineering Management, Hiring, Roadmap Planning, System Architecture, Agent-assisted Workflow Design, Confluence, Jira, Documentation Governance, Release Planning, KPI Reporting'
+          - Lead a 3-5 engineer cloud team across timetabling, mission management, safety-control workflows, and observability, owning cross-service architecture and partnering with the CEO on roadmap and KPI planning.
+          - Designed a human-reviewed interview pipeline used for 13 candidates, replacing PowerPoint/Excel handoffs with version-controlled Confluence records and cutting an estimated 90% of HR coordination overhead.
+          - Built agent-assisted planning and documentation workflows that turn engineering specs into delivery maps, Gantt timelines, and half-year roadmaps with source-grounded Confluence/Jira write-back and post-write verification.
       - company: LILEE Systems
         position: Full Stack Engineer
         start_date: 2024-05
         end_date: 2026-03
         location: New Taipei City, Taiwan
         highlights:
-          - Built the platform's train timetabling stack from scratch — full-day conflict detection (1-3s), auto-generation of conflict-free schedules from fleet/demand/route inputs, and a millisecond-precision visualization exposing track state, vehicle positions, signals, and conflict roots.
-          - Re-architected the Safety Server from a stateless service into a two-tier stateful system (Core Services + Mission Execution) with explicit mission FSM and Movement Authority lifecycle — turning silently-stuck missions into something the team can debug in seconds via Grafana.
-          - Designed Faramund, the platform's breakdown-recovery agent — a 28-state FSM that orchestrates the cloud services and field operators over WebSocket, replacing a multi-team manual workflow.
-          - Built seshat-go from scratch — a Go + TimescaleDB service that records MQTT traffic across the testbed and replays module state, making cross-module incidents debuggable for the entire team.
-          - Stood up Playwright E2E automation gated through Jenkins CI — the suite blocks image publishing on failure, catching regressions before they reach QA.
-          - '**Skills**: Python (FastAPI, GraphQL, SQLAlchemy, asyncio), TypeScript (D3.js, Angular, PrimeNG), Go, MQTT, PostgreSQL, TimescaleDB, Docker, Playwright, Jenkins, Grafana, FSM Design'
+          - Built a testbed timetabling stack that has run a recurring 1,351-service weekend schedule over a 02:00-23:30 daily horizon for several months, detecting full-day conflicts in 1-3 seconds against a topology snapshot containing 34 routes, 28 blocks, and 51 sub-blocks.
+          - Re-architected the Safety Server within LILEE's cloud control platform from a stateless service into stateful Core Services and Mission Execution layers with explicit mission FSM and Movement Authority lifecycle, making previously opaque testbed failures traceable within seconds through Grafana.
+          - Designed Faramund, a 28-state breakdown-recovery FSM that automatically clears testbed recovery conditions over WebSocket, eliminating the need for continuous 24-hour human monitoring.
+          - Built seshat-go, a Go and TimescaleDB service recording 14 MQTT topics across a 14-day, approximately 300 GB testbed history window, enabling engineers to replay module state and reconstruct cross-module incidents.
+          - Built a release-gated Playwright/Jenkins pipeline from scratch and governed a team-authored 86-case regression plan; the gate initially caught 1-2 bugs per build and helped establish pre-push testing, making later release findings rare within about a month.
       - company: WeBIM Services
         position: AI Technical Lead
         start_date: 2024-01
         end_date: 2024-05
         location: Taipei, Taiwan
         highlights:
-          - Developed enterprise knowledge management system using Azure AI Service to digitize paper documents and improve document retrieval efficiency.
-          - Developed intelligent customer service system using OpenAI GPT to automatically respond to customer inquiries, reducing 86% of customer service workload.
-          - Researched and established micro-front-end architecture to allow Vue2 and Vue3 services to coexist during migration.
-          - '**Skills**: ASP.NET Core, TypeScript(Vue2, Vue3, Nuxt.js, Vuetify), MySQL, MongoDB, Azure AI, Semantic Kernel, Project Management, Docker'
+          - Led enterprise AI and frontend migration initiatives.
+          - Developed an enterprise knowledge-management system using Azure AI Service to digitize paper documents and improve internal search and retrieval workflows.
+          - Built an OpenAI GPT-powered customer-service automation system that reduced manual customer-service workload by 86%.
+          - Introduced a micro-frontend migration architecture that enabled Vue2 and Vue3 services to coexist during frontend modernization.
       - company: WeBIM Services
         position: Full Stack Engineer
         start_date: 2019-07
         end_date: 2024-01
         location: Taipei, Taiwan
         highlights:
-          - Designed and developed attendance and approval modules for SyncoBox EIP.
-          - Established and maintained CI/CD processes and deployments on Azure.
-          - Designed and developed SyncoBox Automation to automate 100% of the inspection process of BIM models.
-          - Developed and maintained shared packages, permission logic, and microservice communication interfaces for the backend team to improve maintainability and reduce collaboration costs.
-          - Researched and utilized Nvidia Omniverse to develop high-quality rendering services.
-          - Developed the 3D model management module for SyncoBox digital design automation service.
-          - Implemented Autodesk Platform Service Viewer for 3D model rendering components.
-          - Developed SyncoBox Panorama to provide online panoramic services with offline access support.
-          - Refactored WeBIMSync and integrated it into SyncoBox services.
-          - Designed and developed SyncoBox Markups to reduce 50% of paper-based discussions in architectural design.
-          - Developed SyncoBox facility management service to improve factory maintenance efficiency by 40%.
-          - Created CCTV electronic fence and alarm system based on computer vision and BIM models to ensure worker safety.
-          - '**Skills**: ASP.NET Core, TypeScript(Vue2, Vue3, Nuxt.js, Vuetify), MySQL, MongoDB, Azure DevOps, Nvidia Omniverse, Docker'
+          - Built SyncoBox Automation to automate 100% of BIM model inspection workflows, reducing manual review effort for architectural and engineering teams.
+          - Designed SyncoBox Markups, reducing paper-based architectural design discussions by 50% through online markup and collaboration workflows.
+          - Developed facility-management modules that improved factory maintenance efficiency by 40%.
+          - Established Azure-based CI/CD and developed shared backend packages, permission logic, and microservice interfaces, improving maintainability and cross-team collaboration.
+          - Built computer-vision-based CCTV electronic-fence and alarm features integrated with BIM models to improve construction-site worker safety.
     Certifications & Languages:
       - label: Certifications
         details: "Microsoft Certified: Azure AI Engineer Associate"
@@ -76,7 +78,7 @@ cv:
         end_date: 2022
         highlights:
           - "GPA: 3.93/4.3"
-          - Real‐Time Indoor Localization with Visual SLAM for Emergency Responders, Automation in Construction, 2022
+          - Real-Time Indoor Localization with Visual SLAM for Emergency Responders, Automation in Construction, 2022
           - Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS, SCEM International Conference, 2022
       - institution: National Taiwan University
         area: Civil Engineering
@@ -97,6 +99,6 @@ cv:
         journal: Automation in Construction
         date: 2022-05
 rendercv_settings:
-  date: "2026-04-27"
+  date: "2026-08-04"
   render_command:
   bold_keywords: []
