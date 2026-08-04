@@ -341,6 +341,17 @@ achievements:
       - Provides millisecond-precision visualization of track state, vehicle positions, signals, and conflict root causes.
       - SafeART 0.20 release evidence reports high-confidence automated regression coverage for timetable CRUD, service CRUD, conflict detection, audit flow, and TSV simulation.
       - The testbed has run a recurring weekend timetable containing 1,351 services over a 02:00-23:30 daily operating horizon for several months.
+    topology_snapshot:
+      repository: thalos
+      revision: 42034d2ce1dae784c74324279287962866bb2520
+      revision_subject: SART-1848 Fix Nibble authority revalidation races
+      source_files:
+        - thalos/const/route.py
+        - thalos/const/vertex.py
+        - thalos/const/track.py
+        - thalos/const/line.py
+        - thalos/const/block.py
+        - thalos/const/sub_block.py
     metrics:
       confirmed:
         - name: conflict_detection_runtime
@@ -350,8 +361,56 @@ achievements:
           basis: recurring weekend timetable, 02:00-23:30 daily operating horizon, run for several months
         - name: deployment_scope
           value: testbed
-      needs_followup:
-        - Route, station, track, and track-segment counts from the exact Thalos const-data baseline used by the benchmark.
+        - name: route_count
+          value: 34
+          details:
+            id_range: 1-34
+            up: 17
+            down: 17
+            unique_entry_signals: 18
+        - name: passenger_station_count
+          value: 3
+          station_ids:
+            - N2
+            - T3
+            - S2
+          basis: inferred by grouping platform names; Thalos has no independent Station entity
+        - name: passenger_platform_track_count
+          value: 6
+          platform_track_ids:
+            - N2WN
+            - N2WS
+            - T3W
+            - T3E
+            - S2WS
+            - S2WN
+        - name: yard_platform_count
+          value: 2
+          platform_ids:
+            - AV1
+            - AV2
+        - name: track_graph_vertex_count
+          value: 45
+        - name: platform_vertex_count
+          value: 8
+        - name: line_count
+          value: 1
+          line_ids:
+            - T3
+        - name: track_count
+          value: 3
+          track_ids:
+            - WT
+            - ET
+            - AV
+        - name: block_count
+          value: 28
+          distribution:
+            WT: 13
+            ET: 13
+            AV: 2
+        - name: sub_block_count
+          value: 51
     technologies:
       - Python
       - TypeScript
@@ -370,12 +429,16 @@ achievements:
     public_safe: true
     boundaries:
       - Do not imply safety certification or final field enforcement unless explicitly confirmed.
-      - The release evidence confirms covered workflows but does not establish the benchmark scale behind the 1-3 second runtime.
+      - Thalos has no independent Station entity; the three-station count is inferred by grouping six passenger platform-track names.
+      - The three track IDs include the AV yard track; do not describe them as three passenger mainline tracks.
+      - Topology counts are a source snapshot at revision 42034d2; do not imply every historical benchmark run used that exact revision without a run manifest.
     sources:
       - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
       - direct_user_confirmation:2026-08-04
+      - direct_channel_report:2026-08-04:leo_thalos_const_summary
     resume_bullets:
-      default: Built the platform's train timetabling stack from scratch, including full-day conflict detection in 1-3 seconds, conflict-free schedule generation from fleet/demand/route inputs, and millisecond-level visualization of track state, vehicle positions, signals, and conflict root causes.
+      default: Built the platform's train timetabling stack from scratch, including full-day conflict detection in 1-3 seconds, conflict-free schedule generation from fleet, demand, and route inputs, and millisecond-level visualization of track state, vehicle positions, signals, and conflict root causes.
+      scale: Built a testbed timetabling stack that has run a recurring 1,351-service weekend schedule over a 02:00-23:30 daily horizon for several months, detecting full-day conflicts in 1-3 seconds against a topology snapshot containing 34 routes, 28 blocks, and 51 sub-blocks.
       platform: Built train timetabling from scratch, aligning scheduling algorithms, route constraints, and operator-facing visualization into a core autonomous-rail planning capability.
 
   - id: lilee-safety-server
