@@ -1,0 +1,990 @@
+version: 1
+candidate:
+  name: Po-Yen Tseng
+  preferred_display_name: Preston Tseng
+  location: New Taipei City, Taiwan
+  email: prestontseng.work@gmail.com
+  links:
+    linkedin: https://www.linkedin.com/in/prestontseng
+
+positioning:
+  primary: Tech Lead / full-stack platform engineer building safety-critical cloud systems and AI-assisted engineering operations for autonomous rail transit.
+  secondary:
+    - Senior Full Stack Engineer
+    - Platform Engineer
+    - Engineering Lead
+    - AI-assisted Operations / Enterprise Automation Engineer
+  differentiators:
+    - Owns safety-critical autonomous rail cloud systems while remaining hands-on.
+    - Converts ambiguous, cross-functional, high-risk workflows into traceable, reviewable, and automated systems.
+    - Combines transportation engineering domain knowledge, enterprise AI experience, and full-stack/platform execution.
+
+skills_inventory:
+  languages:
+    - Python
+    - TypeScript
+    - Go
+    - C#
+  backend:
+    - FastAPI
+    - GraphQL
+    - SQLAlchemy
+    - asyncio
+    - ASP.NET Core
+  frontend:
+    - Angular
+    - Vue2
+    - Vue3
+    - Nuxt.js
+    - D3.js
+    - PrimeNG
+    - Vuetify
+  data_and_infra:
+    - PostgreSQL
+    - TimescaleDB
+    - MySQL
+    - MongoDB
+    - Docker
+    - Jenkins
+    - Azure DevOps
+  ai_and_automation:
+    platforms_and_frameworks:
+      - Azure AI Service
+      - OpenAI GPT
+      - Semantic Kernel
+    agent_tools:
+      - name: Hermes Agent
+        evidence_status: extensively_evidenced_in_lilee_tapas_workflows
+        evidenced_use:
+          - Product/spec planning
+          - Confluence/Jira governance
+          - Candidate evaluation and tracking
+          - Multi-profile agent operations
+        sources:
+          - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+      - name: Claude Code
+        evidence_status: user_confirmed_pre_hermes_development_tool
+        evidenced_use:
+          - Development work before adopting Hermes Agent
+          - Developed and validated reusable engineering skills and workflows that were later migrated into Hermes
+        sources:
+          - kb://plans/2026-06-13-leo-tapas-profile-setup-assets/claude-code-integration.md
+          - direct_user_confirmation:2026-08-04
+      - name: Codex
+        evidence_status: user_confirmed_pre_hermes_development_tool
+        evidenced_use:
+          - Development work before adopting Hermes Agent
+          - Developed and validated reusable engineering skills and workflows that were later migrated into Hermes
+        sources:
+          - kb://plans/2026-07-19-leo-hermes-018-migration-dependency-check/status.md
+          - direct_user_confirmation:2026-08-04
+    capabilities:
+      - Agent-assisted workflow design
+      - Human-in-the-loop review workflows
+      - Source-grounded documentation governance
+  testing_and_observability:
+    - Playwright
+    - Grafana
+    - CI/CD
+    - E2E automation
+    - MQTT replay
+  domains:
+    - Autonomous rail systems
+    - Safety-critical cloud workflows
+    - Timetabling
+    - Mission execution
+    - BIM automation
+    - FSM design
+
+roles:
+  - id: lilee-tech-lead
+    company: LILEE Systems
+    title: Tech Lead
+    start_date: 2026-04
+    end_date: present
+    location: New Taipei City, Taiwan
+    summary: Leads a 3-5 person cloud team, owns cross-service architecture decisions, partners with the CEO on roadmap/KPI planning, and operationalizes agent-assisted engineering workflows.
+    evidence_status: current_role_with_confirmed_planned_outcomes
+    planned_outcomes:
+      - Develop Stan into the primary owner of Safety Server, with Preston limited to major architecture review and escalation after ownership transfer.
+      - Govern signed-off SafeART 0.21-0.24 release baselines through PO, Tech Lead, and feature-owner agreement, with formal rebaseline for later scope changes.
+      - Complete the Next-gen TAPAS target architecture and migration plan, including service boundaries, data ownership, communication contracts, failure isolation, observability, and phased cutover.
+      - Complete an implementation-ready M1-M3 Dispatcher Workstation design package with developer-facing specifications and an external-facing explanation.
+    sources:
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/status.md
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/kpi-proposal.md
+  - id: lilee-full-stack-engineer
+    company: LILEE Systems
+    title: Full Stack Engineer
+    start_date: 2024-05
+    end_date: 2026-03
+    location: New Taipei City, Taiwan
+    summary: Built autonomous rail platform capabilities including timetabling, Safety Server architecture, breakdown recovery, MQTT replay, and CI quality gates.
+  - id: webim-ai-technical-lead
+    company: WeBIM Services
+    title: AI Technical Lead
+    start_date: 2024-01
+    end_date: 2024-05
+    location: Taipei, Taiwan
+    summary: Led enterprise AI and frontend migration initiatives using Azure AI, OpenAI GPT, Semantic Kernel, and micro-frontend architecture.
+  - id: webim-full-stack-engineer
+    company: WeBIM Services
+    title: Full Stack Engineer
+    start_date: 2019-07
+    end_date: 2024-01
+    location: Taipei, Taiwan
+    summary: Built and maintained SyncoBox enterprise/BIM automation products, Azure CI/CD, shared backend packages, permission systems, and computer-vision safety features.
+
+achievements:
+  - id: lilee-tech-lead-team
+    title: Cloud team leadership and platform architecture
+    role_id: lilee-tech-lead
+    timeframe: 2026-04 to present
+    summary: Leads a small cloud engineering team and owns cross-service architecture and planning responsibilities.
+    facts:
+      - Leads a 3-5 person cloud team.
+      - Owns architecture across timetabling, mission management, safety control, and observability services.
+      - Partners with the CEO on H1/H2 roadmap and KPI planning.
+      - Defined an evidence-based ownership-transfer target in which Stan becomes Safety Server Primary Owner and Preston moves to architecture review and escalation.
+      - Defined release-governance expectations around signed-off baselines, committed dates, no committed feature drop, and formal rebaseline for later scope changes.
+    metrics:
+      confirmed:
+        - name: team_size
+          value: 3-5 engineers
+      needs_followup:
+        - Specific design review, mentoring, hiring, or delivery cadence outcomes.
+        - Roadmap/KPI examples that are safe to disclose publicly.
+    technologies: []
+    themes:
+      - engineering leadership
+      - architecture ownership
+      - roadmap planning
+      - safety-critical systems
+    target_roles:
+      - Tech Lead
+      - Engineering Lead
+      - Staff Software Engineer
+    public_safe: true
+    boundaries:
+      - Avoid presenting this short-tenure Tech Lead role as multi-year people-management experience.
+      - The ownership transfer, release outcomes, platform architecture, WSS/PLC redesign, and dispatcher design package are confirmed H2 objectives, not completed resume outcomes yet.
+    sources:
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/status.md
+      - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/kpi-proposal.md
+    resume_bullets:
+      default: Lead a 3-5 person cloud team across timetabling, mission management, safety control, and observability services, owning cross-service architecture and roadmap execution.
+      tech_lead: Lead a 3-5 engineer cloud team, drive architecture decisions across the autonomous-rail cloud platform, and partner with executive stakeholders on roadmap and KPI planning.
+
+  - id: lilee-ai-interview-pipeline
+    title: Agent-assisted interview pipeline
+    role_id: lilee-tech-lead
+    timeframe: 2026-04 to present
+    summary: Designed an agent-assisted hiring workflow from resume review through final interview.
+    facts:
+      - Pipeline generates traceable review records from resume review through final interview.
+      - Workflow reduces coordination overhead with HR.
+      - Review artifacts are designed to be traceable and auditable.
+      - Resume evidence is compared against live hiring plans and role-specific JDs rather than a remembered generic rubric.
+      - The workflow separates observed evidence, inference, risk, recommendation, and follow-up questions.
+      - Stage gates cover resume review, HR screening, role-specific technical evaluation, and later decision records.
+      - Candidate tracking pages use structured scores, comments, source references, controlled write approval, and persisted-layout verification.
+      - Before the workflow, HR maintained shared PowerPoint candidate data and Excel scores; interviewers sent materials to Preston, who had to review, update both files at each stage, and send them back.
+      - The current workflow lets the agent update version-controlled Confluence records automatically, leaving email notification and human review/advancement as the coordination path.
+      - The workflow has processed 13 candidates.
+    metrics:
+      confirmed:
+        - name: hr_coordination_overhead_reduction
+          value: approximately 90%
+          basis: user estimate from replacing repeated PowerPoint/Excel updates and file exchanges with agent-maintained Confluence records and email notification
+        - name: candidates_processed
+          value: 13
+    technologies:
+      - Hermes Agent
+      - Agent-assisted workflow design
+      - Discord
+      - Local scripts
+    themes:
+      - hiring operations
+      - AI-assisted workflow
+      - documentation governance
+      - traceability
+    target_roles:
+      - Tech Lead
+      - Engineering Manager
+      - AI Operations
+      - Founding Engineer
+    public_safe: true
+    boundaries:
+      - Emphasize human review and decision support; do not imply fully automated hiring decisions.
+      - Candidate-specific personal data and judgments remain in restricted task/tracking records, not reusable knowledge or public resume content.
+      - The approximately 90% figure is a workflow-overhead estimate, not a time-tracked controlled measurement.
+    sources:
+      - kb://knowledge/hiring/agent-assisted-candidate-evaluation
+      - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+      - direct_user_confirmation:2026-08-04
+    resume_bullets:
+      default: Designed a human-reviewed agent-assisted interview pipeline used for 13 candidates, replacing repeated PowerPoint/Excel handoffs with version-controlled Confluence records and reducing estimated HR coordination overhead by approximately 90%.
+      executive: Built a human-reviewed interview operating system that reduces HR coordination cost and makes hiring decisions traceable from resume screen through final interview.
+
+  - id: lilee-ai-spec-roadmap-flow
+    title: Spec-to-delivery-map-to-roadmap workflow
+    role_id: lilee-tech-lead
+    timeframe: 2026-04 to present
+    summary: Built an AI-assisted planning flow that transforms specs into delivery maps, Gantt-style timelines, and half-year roadmap artifacts.
+    facts:
+      - Converts detailed engineering specs into delivery maps.
+      - Produces Gantt-style delivery views and half-year roadmap artifacts.
+      - Aligns internal engineering detail with stakeholder-facing timeline and release commitments.
+      - Delivery Maps bridge feature/spec intent to release-aligned, delegable work organized by workstream, release order, dependencies, and ownership boundaries.
+      - Produced TSR Delivery Map updates, 2026 H2 KPI synchronization, a TSR Gantt generation script, and Mermaid Gantt assets with product/backend/frontend role coloring.
+      - Keeps Delivery Map, Jira hierarchy, due dates, release/KPI views, and source specs traceable to one another.
+    metrics:
+      confirmed: []
+      needs_followup:
+        - Planning cycle time before and after the workflow.
+        - Number of specs, delivery maps, or roadmap cycles supported.
+        - External stakeholder groups using the output.
+    technologies:
+      - Hermes Agent
+      - Confluence
+      - Jira
+      - Agent-assisted workflow design
+    themes:
+      - roadmap planning
+      - release planning
+      - cross-functional alignment
+      - documentation automation
+    target_roles:
+      - Tech Lead
+      - Engineering Lead
+      - Product-minded Engineer
+      - AI Operations
+    public_safe: true
+    boundaries:
+      - Do not disclose confidential roadmap content or unreleased product commitments.
+      - Do not infer missing tickets, owners, due dates, or release facts; preserve gaps until authoritative sources resolve them.
+    sources:
+      - kb://knowledge/product-operations/delivery-map-governance
+      - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+    resume_bullets:
+      default: Built an AI-assisted planning workflow that converts engineering specs into delivery maps, Gantt timelines, and half-year roadmap artifacts, aligning detailed engineering execution with stakeholder-facing release commitments.
+      executive: Turned engineering specs into stakeholder-facing roadmap and release-commitment artifacts, improving planning visibility across engineering and external teams.
+
+  - id: lilee-ai-doc-governance
+    title: Source-grounded Confluence/Jira documentation governance
+    role_id: lilee-tech-lead
+    timeframe: 2026-04 to present
+    summary: Operationalized source-grounded documentation workflows with live source-of-truth reads, durable task records, validation, and read-back verification.
+    facts:
+      - Connects Confluence, Jira, Discord, local scripts, and reusable domain skills.
+      - Uses live source-of-truth reads before writing.
+      - Maintains durable task records.
+      - Uses ADF validation, write-back controls, and post-write read-back verification.
+      - Standardizes release planning, feature specs, delivery-map maintenance, candidate review, and KPI reporting.
+      - Preserves untouched ADF nodes, table attributes, media, links, mentions, status controls, and extension nodes through surgical edits.
+      - Verifies persisted semantic content and structural invariants after write-back instead of treating an API success response as completion.
+      - Visible records show 8 LILEE/TAPAS-specific skills, about 40 related durable task directories, and at least 7 standardized Confluence/Jira automation workflows as of the 2026-07-07 audit.
+    metrics:
+      confirmed:
+        - name: lilee_tapas_specific_skills
+          value: 8
+          basis: visible active-profile inventory as of 2026-07-07
+        - name: related_durable_task_directories
+          value: approximately 40
+          basis: visible task-record audit as of 2026-07-07
+        - name: major_confluence_jira_workflows
+          value: at least 7
+          basis: visible workflow audit as of 2026-07-07
+      needs_followup:
+        - Number of Confluence/Jira artifacts maintained.
+        - Reduction in stale planning artifacts.
+        - Specific KPI reporting or release planning examples safe to disclose.
+    technologies:
+      - Hermes Agent
+      - Confluence
+      - Jira
+      - Discord
+      - ADF validation
+      - Local scripts
+    themes:
+      - documentation governance
+      - source-grounded automation
+      - planning operations
+      - traceability
+    target_roles:
+      - Tech Lead
+      - Engineering Lead
+      - AI Operations
+      - Platform Engineer
+    public_safe: true
+    boundaries:
+      - Avoid excessive internal product names unless the target audience understands them.
+      - Do not disclose private Confluence/Jira content.
+      - Treat the scale counts as a dated visible-record audit, not exhaustive lifetime totals.
+    sources:
+      - kb://knowledge/product-operations/source-grounded-atlassian-writeback
+      - kb://knowledge/product-operations/delivery-map-governance
+      - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+    resume_bullets:
+      default: Operationalized source-grounded Confluence/Jira workflows with live source-of-truth reads, durable task records, write-back validation, and post-write verification, reducing stale planning artifacts and improving documentation governance.
+      concise: Integrated Confluence, Jira, Discord, local scripts, and reusable domain skills into agent-based product-operations workflows for release planning, candidate review, KPI reporting, and documentation governance.
+
+  - id: lilee-timetabling
+    title: Train timetabling platform
+    role_id: lilee-full-stack-engineer
+    timeframe: 2024-05 to 2026-03
+    summary: Built train timetabling stack from scratch for the autonomous rail platform.
+    facts:
+      - Built the platform's train timetabling stack from scratch.
+      - Full-day conflict detection runs in 1-3 seconds.
+      - Generates conflict-free schedules from fleet, demand, and route inputs.
+      - Provides millisecond-precision visualization of track state, vehicle positions, signals, and conflict root causes.
+      - SafeART 0.20 release evidence reports high-confidence automated regression coverage for timetable CRUD, service CRUD, conflict detection, audit flow, and TSV simulation.
+      - The testbed has run a recurring weekend timetable containing 1,351 services over a 02:00-23:30 daily operating horizon for several months.
+    topology_snapshot:
+      repository: thalos
+      revision: 42034d2ce1dae784c74324279287962866bb2520
+      revision_subject: SART-1848 Fix Nibble authority revalidation races
+      source_files:
+        - thalos/const/route.py
+        - thalos/const/vertex.py
+        - thalos/const/track.py
+        - thalos/const/line.py
+        - thalos/const/block.py
+        - thalos/const/sub_block.py
+    metrics:
+      confirmed:
+        - name: conflict_detection_runtime
+          value: 1-3 seconds
+        - name: recurring_weekend_testbed_services
+          value: 1351 services
+          basis: recurring weekend timetable, 02:00-23:30 daily operating horizon, run for several months
+        - name: deployment_scope
+          value: testbed
+        - name: route_count
+          value: 34
+          details:
+            id_range: 1-34
+            up: 17
+            down: 17
+            unique_entry_signals: 18
+        - name: passenger_station_count
+          value: 3
+          station_ids:
+            - N2
+            - T3
+            - S2
+          basis: inferred by grouping platform names; Thalos has no independent Station entity
+        - name: passenger_platform_track_count
+          value: 6
+          platform_track_ids:
+            - N2WN
+            - N2WS
+            - T3W
+            - T3E
+            - S2WS
+            - S2WN
+        - name: yard_platform_count
+          value: 2
+          platform_ids:
+            - AV1
+            - AV2
+        - name: track_graph_vertex_count
+          value: 45
+        - name: platform_vertex_count
+          value: 8
+        - name: line_count
+          value: 1
+          line_ids:
+            - T3
+        - name: track_count
+          value: 3
+          track_ids:
+            - WT
+            - ET
+            - AV
+        - name: block_count
+          value: 28
+          distribution:
+            WT: 13
+            ET: 13
+            AV: 2
+        - name: sub_block_count
+          value: 51
+    technologies:
+      - Python
+      - TypeScript
+      - D3.js
+    themes:
+      - scheduling algorithms
+      - autonomous rail
+      - platform engineering
+      - real-time visualization
+      - operations planning
+    target_roles:
+      - Tech Lead
+      - Senior Platform Engineer
+      - Full Stack Engineer
+      - Transportation Technology Engineer
+    public_safe: true
+    boundaries:
+      - Do not imply safety certification or final field enforcement unless explicitly confirmed.
+      - Thalos has no independent Station entity; the three-station count is inferred by grouping six passenger platform-track names.
+      - The three track IDs include the AV yard track; do not describe them as three passenger mainline tracks.
+      - Topology counts are a source snapshot at revision 42034d2; do not imply every historical benchmark run used that exact revision without a run manifest.
+    sources:
+      - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
+      - direct_user_confirmation:2026-08-04
+      - direct_channel_report:2026-08-04:leo_thalos_const_summary
+    resume_bullets:
+      default: Built the platform's train timetabling stack from scratch, including full-day conflict detection in 1-3 seconds, conflict-free schedule generation from fleet, demand, and route inputs, and millisecond-level visualization of track state, vehicle positions, signals, and conflict root causes.
+      scale: Built a testbed timetabling stack that has run a recurring 1,351-service weekend schedule over a 02:00-23:30 daily horizon for several months, detecting full-day conflicts in 1-3 seconds against a topology snapshot containing 34 routes, 28 blocks, and 51 sub-blocks.
+      platform: Built train timetabling from scratch, aligning scheduling algorithms, route constraints, and operator-facing visualization into a core autonomous-rail planning capability.
+
+  - id: lilee-safety-server
+    title: Safety Server stateful architecture
+    role_id: lilee-full-stack-engineer
+    timeframe: 2024-05 to 2026-03
+    summary: Re-architected Safety Server from stateless service into two-tier stateful system with mission FSM and Movement Authority lifecycle.
+    facts:
+      - Re-architected Safety Server from a stateless service into a two-tier stateful system.
+      - Architecture separates Core Services and Mission Execution.
+      - Introduced explicit mission FSM and Movement Authority lifecycle.
+      - Made silently stuck missions debuggable in seconds via Grafana.
+      - Safety Server route-request ordering changes selection logic inside Safety Server; it does not change WSS/PLC authorization behavior or preempt an already authorized route.
+      - For TSR/Form A/Form B, Safety Server owns the operational golden copy, timer-driven state transitions, validation, and Movement Authority integration, while JPS is the dispatcher API gateway and long-term history/audit persistence layer.
+      - The WSS agent subscribes to Safety Server route/door commands over MQTT, translates them into Modbus register state for PLC/IXL, and applies failsafe marking when commands stop arriving.
+      - ADS receives Movement Authority commands from Safety Server over WebSocket and returns MA acknowledgements; the existing MA payload remains the vehicle-facing contract for TSR/Form A/Form B.
+      - The architecture is used in Alpha and pre-alpha testbeds.
+      - Before the observability/state-management improvement, a stuck mission could remain blocked and eventually fail.
+    metrics:
+      confirmed:
+        - name: stuck_mission_debuggability
+          value: debuggable in seconds via Grafana
+        - name: deployment_scope
+          value: Alpha and pre-alpha testbeds
+      needs_followup:
+        - Quantitative diagnosis or recovery time before and after the architecture change, if available.
+        - Audit log, rollback, manual override, timeout, and idempotency details safe to disclose.
+    technologies:
+      - Python
+      - FastAPI
+      - GraphQL
+      - SQLAlchemy
+      - asyncio
+      - Grafana
+    themes:
+      - safety-critical systems
+      - stateful architecture
+      - FSM design
+      - observability
+      - incident debugging
+    target_roles:
+      - Tech Lead
+      - Platform Engineer
+      - Backend Engineer
+      - Safety-critical Systems Engineer
+    public_safe: true
+    boundaries:
+      - Use boundary language such as within LILEE's cloud control platform.
+      - Safety Server owns cloud-side mission selection, operational restriction state, and Movement Authority integration; WSS/PLC remains a separate authorization and field-control boundary.
+      - ADS/vehicle-side software consumes and acknowledges MA; do not imply that Safety Server alone provides final field or onboard enforcement.
+    sources:
+      - kb://plans/2026-06-08-leo-po-example-from-n4bi4q/plan.md
+      - kb://plans/2026-07-14-leo-tsr-ws6-ticket-audit/spec_page_text.md
+      - kb://plans/2026-07-08-leo-wss-agent-architecture/wss-agent-architecture.md
+      - kb://plans/2026-07-23-leo-tapas-testbed-mock-ads-triops/spec-v2.md
+      - direct_user_confirmation:2026-08-04
+    resume_bullets:
+      default: Re-architected the Safety Server from a stateless service into a two-tier stateful system with explicit mission FSM and Movement Authority lifecycle, turning silently stuck missions into Grafana-traceable incidents debuggable within seconds.
+      safety_boundary: Re-architected the Safety Server within LILEE's cloud control platform into a stateful Core Services + Mission Execution architecture with explicit mission FSM, Movement Authority lifecycle, and observable command-state transitions.
+
+  - id: lilee-faramund
+    title: Faramund breakdown-recovery agent
+    role_id: lilee-full-stack-engineer
+    timeframe: 2024-05 to 2026-03
+    summary: Designed a 28-state FSM that coordinates breakdown recovery across cloud services and field operators.
+    facts:
+      - Designed Faramund, the platform's breakdown-recovery agent.
+      - Uses a 28-state FSM.
+      - Orchestrates cloud services and field operators over WebSocket.
+      - Replaced a testbed recovery model that required one person to monitor operations continuously, 24 hours a day.
+      - After the change, the testbed can automatically clear recovery conditions without operator approval.
+      - Owns DOM 10 recovery in the documented mission-ordering context, where recovery traffic is distinguished from normal dispatch and return-to-yard intent.
+    metrics:
+      confirmed:
+        - name: fsm_state_count
+          value: 28 states
+        - name: continuous_human_monitoring_before
+          value: one person, 24 hours per day
+        - name: operator_approval_required_after
+          value: false
+        - name: deployment_scope
+          value: testbed
+      needs_followup:
+        - Frequency of recovery events and avoided manual interventions, if tracked.
+    technologies:
+      - WebSocket
+      - FSM design
+    themes:
+      - workflow automation
+      - incident recovery
+      - human-in-the-loop operations
+      - autonomous rail
+    target_roles:
+      - Tech Lead
+      - Platform Engineer
+      - AI Operations
+      - Full Stack Engineer
+    public_safe: true
+    boundaries:
+      - This is testbed recovery automation and does not require operator approval; do not imply production deployment.
+    sources:
+      - kb://plans/2026-06-04-leo-faramund-dispatch-rules/plan.md
+      - direct_user_confirmation:2026-08-04
+    resume_bullets:
+      default: Designed Faramund, a 28-state breakdown-recovery FSM that automatically clears testbed recovery conditions over WebSocket, eliminating the need for continuous 24-hour human monitoring.
+      executive: Converted continuously monitored testbed recovery into an autonomous, observable 28-state workflow with explicit failure handling.
+
+  - id: lilee-seshat-go
+    title: seshat-go MQTT recording and replay service
+    role_id: lilee-full-stack-engineer
+    timeframe: 2024-05 to 2026-03
+    summary: Built a Go + TimescaleDB service to record MQTT traffic and replay module state for cross-module incident debugging.
+    facts:
+      - Built seshat-go from scratch.
+      - The Go backend and React frontend PoC records configurable MQTT topics into PostgreSQL/TimescaleDB as raw JSONB with compression and retention policies.
+      - Its source snapshot states that it subscribes to all MQTT topics and supports ICD message types 1 through 19.
+      - Provides time-range/topic queries, payload-field filtering, multi-topic comparison, and track-map/state replay for historical incident analysis.
+      - Makes cross-module incidents debuggable for the team.
+      - Operates as an observer and is not a TAPAS runtime dependency or part of the operational control path.
+    metrics:
+      confirmed:
+        - name: known_icd_message_type_scope
+          value: types 1 through 19
+          basis: Seshat source snapshot and Seshat 2.0 terminology
+        - name: captured_mqtt_topics
+          value: 14 topics
+        - name: retention_period
+          value: 14 days
+        - name: storage_capacity_for_retention_window
+          value: approximately 300 GB
+          basis: 300 GB is approximately full after 14 days
+      derived_estimates:
+        - name: average_storage_growth
+          value: approximately 21.4 GB/day
+          calculation: 300 GB / 14 days
+          boundary: Storage growth estimate; not a measured MQTT network throughput rate and may include database/index overhead.
+      needs_followup:
+        - Measured MQTT message throughput, if available.
+        - Debug time or MTTR improvement.
+        - Number of modules covered.
+    technologies:
+      - Go
+      - TimescaleDB
+      - MQTT
+      - PostgreSQL
+    themes:
+      - observability
+      - event replay
+      - incident response
+      - distributed systems
+    target_roles:
+      - Platform Engineer
+      - Backend Engineer
+      - Tech Lead
+      - Observability Engineer
+    public_safe: true
+    boundaries:
+      - Current source states testbed traffic; do not imply production unless confirmed.
+      - Seshat observes and analyzes MQTT traffic; it has no runtime authority over SS, JPS, MMS, WSS, ADS, or TriOps.
+      - ICD type range does not equal the exact number of actively captured MQTT topics.
+      - The 21.4 GB/day figure is derived from storage capacity and retention, not a measured broker throughput value.
+    sources:
+      - kb://plans/2026-07-02-leo-seshat-spec/page-snapshot.md
+      - kb://plans/2026-07-02-leo-seshat-spec/seshat-2.0-draft-v1.md
+      - direct_user_confirmation:2026-08-04
+    resume_bullets:
+      default: Built seshat-go, a Go + TimescaleDB service recording 14 MQTT topics across a 14-day, approximately 300 GB testbed history window, enabling engineers to replay module state and reconstruct cross-module incidents.
+      reliability: Built MQTT recording/replay infrastructure that lets engineers reconstruct cross-module incidents without relying on live reproduction.
+
+  - id: lilee-playwright-jenkins
+    title: Release-gated E2E CI pipeline and test-plan governance
+    role_id: lilee-full-stack-engineer
+    timeframe: 2024-05 to 2026-03
+    summary: Built the release-gated Playwright/Jenkins pipeline from scratch and governed a team-accumulated regression plan, while a team member implemented the test automation.
+    facts:
+      - Built the Playwright/Jenkins release pipeline from scratch.
+      - CI blocks image publishing when the suite fails.
+      - Catches regressions before they reach QA.
+      - Team members accumulated the 86 test cases across releases; Preston reviewed and curated them into the test plan, and Lorenzo later implemented the automation.
+      - The suite runs after every release build.
+      - During initial adoption, each build typically exposed one or two bugs; after about one month, findings became rare as developers began testing before pushing code.
+      - A June 2026 SafeART release evidence set records 86 passed automated cases spanning timetable/service CRUD, conflict detection, audit, realtime vehicle/track/signal/conflict views, manual mode, cross-day handling, severity events, DOM, vehicle management, and user management.
+    metrics:
+      confirmed:
+        - name: release_evidence_passed_automated_cases
+          value: 86
+          basis: live SafeART 0.20 release-note evidence summarized on 2026-06-25
+        - name: initial_regressions_caught_per_build
+          value: 1-2 bugs
+          basis: typical result during initial adoption
+        - name: gate_frequency
+          value: every release build
+        - name: later_regression_trend
+          value: findings became rare after approximately one month
+          basis: developers adopted pre-push testing
+    technologies:
+      - Playwright
+      - Jenkins
+      - Docker
+      - CI/CD
+    themes:
+      - quality gates
+      - release reliability
+      - E2E testing
+      - automation
+    target_roles:
+      - Tech Lead
+      - Full Stack Engineer
+      - Platform Engineer
+    public_safe: true
+    boundaries:
+      - The 86 cases were accumulated by team members and later automated by Lorenzo; Preston's contribution was pipeline creation, test review/curation, and quality-gate governance.
+    sources:
+      - kb://plans/2026-06-25-leo-safeart-020-qa-decision-summary/status.md
+      - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
+      - direct_user_confirmation:2026-08-04
+    resume_bullets:
+      default: Built a release-gated Playwright/Jenkins pipeline from scratch and governed a team-authored 86-case regression plan; the gate initially caught 1-2 bugs per build and helped establish pre-push developer testing, making later release findings rare within about a month.
+      concise: Built a release-gated Playwright/Jenkins pipeline and governed an 86-case team regression plan, blocking failed builds before QA.
+
+  - id: webim-knowledge-management
+    title: Enterprise knowledge management with Azure AI
+    role_id: webim-ai-technical-lead
+    timeframe: 2024-01 to 2024-05
+    summary: Developed enterprise knowledge management system using Azure AI Service to digitize paper documents and improve retrieval.
+    facts:
+      - Developed enterprise knowledge management system.
+      - Used Azure AI Service to digitize paper documents.
+      - Improved document retrieval efficiency.
+    metrics:
+      confirmed: []
+      needs_followup:
+        - Document volume and retrieval improvement measurement.
+        - Whether retrieval used RAG, search indexes, OCR, or other Azure AI components.
+    technologies:
+      - Azure AI Service
+      - ASP.NET Core
+      - TypeScript
+    themes:
+      - enterprise AI
+      - document digitization
+      - knowledge retrieval
+    target_roles:
+      - AI Engineer
+      - Full Stack Engineer
+      - Enterprise Automation Engineer
+    public_safe: true
+    boundaries: []
+    resume_bullets:
+      default: Developed an enterprise knowledge management system using Azure AI Service to digitize paper documents and improve internal document search and retrieval workflows.
+
+  - id: webim-gpt-customer-service
+    title: GPT-powered customer service automation
+    role_id: webim-ai-technical-lead
+    timeframe: 2024-01 to 2024-05
+    summary: Built an OpenAI GPT-powered customer service automation system that reduced manual workload.
+    facts:
+      - Developed intelligent customer service system using OpenAI GPT.
+      - Automatically responds to customer inquiries.
+      - Reduced customer service workload by 86%.
+    metrics:
+      confirmed:
+        - name: customer_service_workload_reduction
+          value: 86%
+      needs_followup:
+        - Measurement method for 86% reduction.
+        - Human handoff/fallback and answer quality controls.
+        - Latency, cost, privacy, or evaluation details safe to disclose.
+    technologies:
+      - OpenAI GPT
+      - Semantic Kernel
+      - ASP.NET Core
+      - TypeScript
+    themes:
+      - enterprise AI
+      - customer service automation
+      - AI operations
+    target_roles:
+      - AI Engineer
+      - Tech Lead
+      - Full Stack Engineer
+    public_safe: true
+    boundaries:
+      - Avoid implying unsupervised customer-facing decisions if human review or fallback existed.
+    resume_bullets:
+      default: Built an OpenAI GPT-powered customer service automation system that reduced manual customer service workload by 86%.
+      ai_quality: Built GPT-powered customer service automation with operational metrics and fallback controls, reducing customer-service workload by 86%.
+
+  - id: webim-micro-frontend
+    title: Vue2/Vue3 micro-frontend migration architecture
+    role_id: webim-ai-technical-lead
+    timeframe: 2024-01 to 2024-05
+    summary: Researched and established micro-frontend architecture for Vue2 and Vue3 coexistence during migration.
+    facts:
+      - Researched micro-frontend architecture.
+      - Enabled Vue2 and Vue3 services to coexist during migration.
+    metrics:
+      confirmed: []
+      needs_followup:
+        - Number of services migrated or supported.
+        - Migration timeline or risk reduction.
+    technologies:
+      - Vue2
+      - Vue3
+      - Nuxt.js
+      - TypeScript
+    themes:
+      - frontend architecture
+      - migration strategy
+      - micro-frontend
+    target_roles:
+      - Frontend Engineer
+      - Full Stack Engineer
+      - Tech Lead
+    public_safe: true
+    boundaries: []
+    resume_bullets:
+      default: Researched and introduced a micro-frontend migration architecture, enabling Vue2 and Vue3 services to coexist during frontend modernization.
+
+  - id: webim-bim-inspection-automation
+    title: SyncoBox Automation BIM inspection automation
+    role_id: webim-full-stack-engineer
+    timeframe: 2019-07 to 2024-01
+    summary: Built SyncoBox Automation to automate BIM model inspection workflows.
+    facts:
+      - Designed and developed SyncoBox Automation.
+      - Automated 100% of BIM model inspection process.
+    metrics:
+      confirmed:
+        - name: bim_inspection_automation
+          value: 100%
+      needs_followup:
+        - Inspection volume or manual time saved.
+        - Customer/team adoption scope.
+    technologies:
+      - ASP.NET Core
+      - TypeScript
+      - BIM
+    themes:
+      - BIM automation
+      - enterprise workflow automation
+      - full-stack engineering
+    target_roles:
+      - Full Stack Engineer
+      - Enterprise Automation Engineer
+      - BIM/Construction Tech Engineer
+    public_safe: true
+    boundaries: []
+    resume_bullets:
+      default: Built SyncoBox Automation to automate 100% of BIM model inspection workflows, reducing manual review effort for architectural and engineering teams.
+
+  - id: webim-shared-platform-packages
+    title: Shared backend packages and microservice interfaces
+    role_id: webim-full-stack-engineer
+    timeframe: 2019-07 to 2024-01
+    summary: Built shared packages, permission logic, and microservice communication interfaces to improve backend maintainability and collaboration.
+    facts:
+      - Developed and maintained shared backend packages.
+      - Built permission logic.
+      - Developed microservice communication interfaces for the backend team.
+      - Improved maintainability and reduced collaboration cost.
+    metrics:
+      confirmed: []
+      needs_followup:
+        - Number of services or packages supported.
+        - Maintainability or collaboration improvement measurement.
+    technologies:
+      - ASP.NET Core
+      - MySQL
+      - MongoDB
+      - Docker
+    themes:
+      - backend architecture
+      - shared platform
+      - microservices
+      - maintainability
+    target_roles:
+      - Backend Engineer
+      - Full Stack Engineer
+      - Platform Engineer
+    public_safe: true
+    boundaries: []
+    resume_bullets:
+      default: Developed shared backend packages, permission logic, and microservice communication interfaces, improving maintainability and reducing cross-team collaboration overhead.
+
+  - id: webim-syncobox-markups
+    title: SyncoBox Markups collaboration workflow
+    role_id: webim-full-stack-engineer
+    timeframe: 2019-07 to 2024-01
+    summary: Built online markup workflows that reduced paper-based architectural design discussions.
+    facts:
+      - Designed and developed SyncoBox Markups.
+      - Reduced paper-based discussions in architectural design by 50%.
+    metrics:
+      confirmed:
+        - name: paper_based_discussion_reduction
+          value: 50%
+      needs_followup:
+        - Measurement method for 50% reduction.
+        - Number of users/projects using Markups.
+    technologies:
+      - TypeScript
+      - ASP.NET Core
+    themes:
+      - collaboration workflows
+      - BIM
+      - design automation
+    target_roles:
+      - Full Stack Engineer
+      - Product Engineer
+      - BIM/Construction Tech Engineer
+    public_safe: true
+    boundaries: []
+    resume_bullets:
+      default: Designed SyncoBox Markups, reducing paper-based architectural design discussions by 50% through online markup and collaboration workflows.
+
+  - id: webim-facility-management
+    title: SyncoBox facility management modules
+    role_id: webim-full-stack-engineer
+    timeframe: 2019-07 to 2024-01
+    summary: Developed facility management services that improved factory maintenance efficiency.
+    facts:
+      - Developed SyncoBox facility management service.
+      - Improved factory maintenance efficiency by 40%.
+    metrics:
+      confirmed:
+        - name: factory_maintenance_efficiency_improvement
+          value: 40%
+      needs_followup:
+        - Measurement method for 40% improvement.
+        - Deployment/customer scope.
+    technologies:
+      - ASP.NET Core
+      - TypeScript
+      - MySQL
+      - MongoDB
+    themes:
+      - facility management
+      - enterprise software
+      - workflow automation
+    target_roles:
+      - Full Stack Engineer
+      - Enterprise Software Engineer
+      - Product Engineer
+    public_safe: true
+    boundaries: []
+    resume_bullets:
+      default: Developed facility-management modules that improved factory maintenance efficiency by 40%.
+
+  - id: webim-computer-vision-safety
+    title: CCTV electronic fence and alarm system
+    role_id: webim-full-stack-engineer
+    timeframe: 2019-07 to 2024-01
+    summary: Built computer-vision-based CCTV electronic fence and alarm system integrated with BIM models.
+    facts:
+      - Created CCTV electronic fence and alarm system.
+      - Used computer vision and BIM models.
+      - Aimed to ensure worker safety.
+    metrics:
+      confirmed: []
+      needs_followup:
+        - Deployment scope, detection performance, and incident-prevention metrics.
+    technologies:
+      - Computer vision
+      - BIM
+      - ASP.NET Core
+      - TypeScript
+    themes:
+      - worker safety
+      - computer vision
+      - BIM integration
+      - construction tech
+    target_roles:
+      - Full Stack Engineer
+      - Computer Vision Application Engineer
+      - BIM/Construction Tech Engineer
+    public_safe: true
+    boundaries: []
+    resume_bullets:
+      default: Built computer-vision-based CCTV electronic fence and alarm features integrated with BIM models to improve construction-site worker safety.
+
+education:
+  - id: ntu-transportation-ms
+    institution: National Taiwan University
+    area: Transportation Engineering
+    degree: Master's degree
+    start_date: 2020
+    end_date: 2022
+    highlights:
+      - GPA: 3.93/4.3
+      - Real-Time Indoor Localization with Visual SLAM for Emergency Responders, Automation in Construction, 2022
+      - Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS, SCEM International Conference, 2022
+  - id: ntu-civil-bs
+    institution: National Taiwan University
+    area: Civil Engineering
+    degree: Bachelor's degree
+    start_date: 2016
+    end_date: 2020
+    highlights:
+      - GPA: 3.92/4.3
+
+certifications:
+  - id: microsoft-azure-ai-engineer-associate
+    name: 'Microsoft Certified: Azure AI Engineer Associate'
+
+languages:
+  - name: Chinese
+    proficiency: native
+  - name: English
+    proficiency: fluent
+    evidence: TOEFL 93/120
+  - name: Japanese
+    proficiency: JLPT N2
+
+publications:
+  - id: visual-slam-emergency-response-automation-in-construction-2022
+    title: Real-time indoor localization with visual SLAM for in-building emergency response
+    authors:
+      - Po-Yen Tseng
+      - Jacob J. Lin
+      - Ying-Chieh Chan
+      - Albert Y. Chen
+    doi: 10.1016/j.autcon.2022.104319
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0926580522001923
+    journal: Automation in Construction
+    date: 2022-05
+
+followups:
+  - id: lilee-timetabling-scale
+    achievement_id: lilee-timetabling
+    question: What benchmark scale does the 1-3 second conflict detection cover, including trains, routes, stations, track segments, and time horizon?
+  - id: lilee-safety-server-boundary
+    achievement_id: lilee-safety-server
+    question: What is the safe public boundary between the cloud Safety Server, field controller, wayside, vehicle, and final enforcement layers?
+  - id: lilee-safety-server-debug-before-after
+    achievement_id: lilee-safety-server
+    question: What was stuck-mission diagnosis time before the re-architecture, compared with the current Grafana-traceable debugging time?
+  - id: lilee-faramund-before-after
+    achievement_id: lilee-faramund
+    question: How long did the previous manual breakdown-recovery workflow take, and how many teams/operators were involved?
+  - id: lilee-seshat-scale
+    achievement_id: lilee-seshat-go
+    question: How many MQTT topics/messages/modules and what retention period does seshat-go cover?
+  - id: lilee-playwright-impact
+    achievement_id: lilee-playwright-jenkins
+    question: How many tests/workflows are covered, and how many regressions or QA escapes were prevented?
+  - id: lilee-agent-workflow-adoption
+    achievement_id: lilee-ai-doc-governance
+    question: How many Confluence/Jira artifacts, specs, delivery maps, candidates, or KPI reports have used the agent-assisted workflows?
