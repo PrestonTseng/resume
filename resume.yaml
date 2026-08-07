@@ -18,7 +18,7 @@ cv:
       - label: Platform & Quality
         details: Distributed systems, Docker, Jenkins, Azure DevOps, Playwright, Grafana, CI/CD, E2E automation, event recording and replay
       - label: AI & Domains
-        details: Azure AI Service, OpenAI GPT, Semantic Kernel, agent-assisted workflows, safety-critical autonomous rail, timetabling, mission execution, FSM design, BIM automation
+        details: Hermes Agent, Azure AI Service, OpenAI GPT, Semantic Kernel, agent-assisted workflows, safety-critical autonomous rail, timetabling, mission execution, FSM design, BIM automation
     experience:
       - company: LILEE Systems
         position: Tech Lead
@@ -27,8 +27,8 @@ cv:
         location: New Taipei City, Taiwan
         highlights:
           - Lead a 3-5 engineer cloud team responsible for timetabling, mission management, safety-control workflows, and observability. Own architecture across services and work with the CEO on roadmaps and KPIs.
-          - Standardized how the cloud team turns specifications into delivery plans. Connected architecture decisions, owners, dependencies, Jira tasks, and release commitments through verified Confluence and Jira workflows.
-          - Replaced repeated PowerPoint and Excel handoffs with human-reviewed, version-controlled Confluence records for 13 candidates. This reduced HR coordination work.
+          - Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence and Jira updates. Created and shared reusable LILEE Systems and railway-rule skills for the team.
+          - Built a human-reviewed, agent-assisted hiring workflow used for 13 candidates. It replaced repeated PowerPoint and Excel handoffs with traceable Confluence records and reduced HR coordination work.
       - company: LILEE Systems
         position: Full Stack Engineer
         start_date: 2024-05

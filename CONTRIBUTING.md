@@ -6,16 +6,17 @@ This is a personal resume repository, so external contributions are not expected
 
 Use this workflow for changes:
 
-1. Edit `resume.yaml` for content updates.
-2. Edit `rendercv/settings.yaml` for design/layout changes.
-3. Regenerate outputs:
+1. Update `resume_facts.yaml` when evidence or claim boundaries change.
+2. Edit `resume.yaml` for curated publication updates.
+3. Edit `rendercv/settings.yaml` for design/layout changes.
+4. Regenerate outputs:
 
    ```bash
    ./script/generate-resume.sh
    ```
 
-4. Review generated files in `output/`.
-5. Commit only source files and configuration, not generated `output/` files.
+5. Review root-level `resume.pdf` and generated files in `output/`.
+6. Commit source/configuration changes together with the refreshed `resume.pdf`; do not commit generated `output/` files.
 
 ## Suggested commit style
 

@@ -6,6 +6,8 @@ README.md
 LICENSE
 CONTRIBUTING.md
 output/
+resume.pdf
+resume_facts.yaml
 logs/
 *.log
 .cache/
