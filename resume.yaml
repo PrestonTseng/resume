@@ -36,17 +36,17 @@ cv:
         location: New Taipei City, Taiwan
         highlights:
           - Built a testbed timetabling platform that runs a recurring 1,351-service weekend schedule and detects full-day conflicts in 1-3 seconds.
-          - Changed the cloud-side Safety Server from a stateless service into stateful Core Services and Mission Execution layers. Added explicit mission and Movement Authority lifecycles. Grafana made previously hidden testbed failures traceable within seconds.
-          - Designed a 28-state recovery FSM that clears testbed recovery conditions over WebSocket. This removed the need for continuous 24-hour monitoring.
-          - Built a Go and TimescaleDB service that records 14 MQTT topics and stores about 300 GB over 14 days. Engineers use it to reconstruct incidents across services.
-          - Built the Jenkins release gate for Playwright tests implemented by a teammate. Managed a team-authored 86-case regression plan. The gate first caught 1-2 bugs per build and helped the team adopt pre-push testing. Release findings became rare within about a month.
+          - Redesigned the cloud-side Safety Server into stateful Core Services and Mission Execution layers with explicit mission and Movement Authority lifecycles. Grafana made hidden testbed failures traceable within seconds.
+          - Built Faramund, a testbed dispatcher agent that opens wayside signals, guides a driver agent with a failed vehicle back to the yard, resolves incidents, and alerts the team without continuous monitoring.
+          - Built a Go and TimescaleDB MQTT recorder and replay tool that helps engineers reconstruct cross-service incidents without reproducing them live.
+          - Built the Jenkins release gate for teammate-implemented Playwright tests and managed the team-authored regression plan. It first caught 1-2 bugs per build and helped establish pre-push testing; release findings became rare within a month.
       - company: WeBIM Services
         position: AI Technical Lead
         start_date: 2024-01
         end_date: 2024-05
         location: Taipei, Taiwan
         highlights:
-          - Led enterprise AI and frontend migration initiatives using Azure AI, OpenAI GPT, Semantic Kernel, and micro-frontend architecture.
+          - Led enterprise AI and frontend migration initiatives using Azure AI, OpenAI GPT, Semantic Kernel, and micro-frontend architecture. Covered document search, customer service automation, and Vue2/Vue3 web platform modernization.
           - Developed an enterprise knowledge-management system using Azure AI Service to digitize paper documents and improve internal search and retrieval workflows.
           - Built an OpenAI GPT-powered customer-service automation system that reduced manual customer-service workload by 86%.
           - Introduced a micro-frontend migration architecture that enabled Vue2 and Vue3 services to coexist during frontend modernization.
