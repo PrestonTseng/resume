@@ -2,19 +2,21 @@
 
 This repository is the source of truth for Preston Tseng's resume/CV.
 
-The resume content is maintained in a single YAML file and rendered into distributable formats with [RenderCV](https://rendercv.com/). Docker is used so the output can be regenerated consistently without installing RenderCV or LaTeX directly on the host machine.
+Career evidence is maintained in `resume_facts.yaml`; the curated default publication is maintained in `resume.yaml` and rendered with [RenderCV](https://rendercv.com/). Docker is used so the output can be regenerated consistently without installing RenderCV or LaTeX directly on the host machine.
 
 ## What is in this repo
 
 | Path | Purpose |
 | --- | --- |
-| `resume.yaml` | Canonical resume content: profile, experience, education, publications, languages, and certifications. |
+| `resume_facts.yaml` | Canonical evidence inventory, including provenance, metrics, boundaries, and publication candidates. |
+| `resume.yaml` | Curated default resume publication: profile, experience, education, publications, languages, and certifications. |
+| `resume.pdf` | Tracked, rendered default resume for immediate review and distribution. |
 | `rendercv/settings.yaml` | RenderCV design, typography, page layout, locale, and theme settings. |
 | `rendercv/engineeringresumes/` | Custom Typst/Jinja2 templates for the rendered resume theme. |
 | `rendercv/markdown/` | Custom Markdown templates for generated Markdown output. |
 | `Dockerfile` | Reproducible RenderCV build environment. |
 | `script/entrypoint.sh` | Container-side render command. |
-| `script/generate-resume.sh` | Host-side helper that builds the Docker image and generates the resume into `output/`. |
+| `script/generate-resume.sh` | Host-side helper that builds the Docker image, generates artifacts into `output/`, and refreshes root-level `resume.pdf`. |
 
 ## Prerequisites
 
@@ -31,31 +33,33 @@ From the repository root:
 ./script/generate-resume.sh
 ```
 
-The generated files are written to:
+Disposable generated files are written to:
 
 ```text
 output/
 ```
 
-`output/` is intentionally ignored by Git because it contains generated artifacts.
+`output/` is intentionally ignored by Git because it contains generated artifacts. The same command also refreshes the tracked `resume.pdf` beside `resume.yaml`.
 
 ## Update workflow
 
-1. Edit `resume.yaml` for content changes.
-2. Edit `rendercv/settings.yaml` for visual/layout changes.
-3. Edit templates under `rendercv/engineeringresumes/` or `rendercv/markdown/` only when the rendered structure itself needs to change.
-4. Run:
+1. Update `resume_facts.yaml` when evidence, provenance, metrics, or claim boundaries change.
+2. Edit `resume.yaml` when the curated default publication changes.
+3. Edit `rendercv/settings.yaml` for visual/layout changes.
+4. Edit templates under `rendercv/engineeringresumes/` or `rendercv/markdown/` only when the rendered structure itself needs to change.
+5. Run:
 
    ```bash
    ./script/generate-resume.sh
    ```
 
-5. Review the files under `output/` before publishing or sharing.
+6. Review `resume.pdf` and the files under `output/` before publishing or sharing.
 
 ## Repository policy
 
-- `resume.yaml` is the canonical content source.
-- Generated files under `output/` should not be committed unless the repository policy changes later.
+- `resume_facts.yaml` is the canonical career-evidence source; `resume.yaml` is the curated default publication.
+- `resume.pdf` is the tracked rendered publication and must be refreshed with every accepted `resume.yaml` or rendering change.
+- Generated files under `output/` should not be committed.
 - Keep personal contact/profile data accurate and review generated artifacts before distribution.
 
 ## License

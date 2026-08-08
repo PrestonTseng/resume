@@ -60,8 +60,10 @@ skills_inventory:
           - Confluence/Jira governance
           - Candidate evaluation and tracking
           - Multi-profile agent operations
+          - Creation and team sharing of reusable LILEE Systems and railway-rule skills
         sources:
           - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+          - direct_user_confirmation:2026-08-07
       - name: Claude Code
         evidence_status: user_confirmed_pre_hermes_development_tool
         evidenced_use:
@@ -329,6 +331,49 @@ achievements:
       default: Operationalized source-grounded Confluence/Jira workflows with live source-of-truth reads, durable task records, write-back validation, and post-write verification, reducing stale planning artifacts and improving documentation governance.
       concise: Integrated Confluence, Jira, Discord, local scripts, and reusable domain skills into agent-based product-operations workflows for release planning, candidate review, KPI reporting, and documentation governance.
 
+  - id: lilee-ai-team-skills
+    title: Shared Hermes skills for team engineering workflows
+    role_id: lilee-tech-lead
+    timeframe: 2026-04 to present
+    summary: Created and shared reusable Hermes Agent skills for LILEE Systems workflows and railway rules so the team could apply the same grounded procedures.
+    facts:
+      - Created multiple reusable Hermes Agent skills for LILEE Systems engineering and product-operations workflows.
+      - Shared every skill under the LILEE Systems skill group with the team.
+      - Created and shared railway-rule skills that package domain rules for reuse by team members and agents.
+      - The skills turn individual working methods into reusable team capabilities rather than one-off prompts.
+    metrics:
+      confirmed: []
+      needs_followup:
+        - Current dated count of shared LILEE Systems and railway-rule skills.
+        - Number of teammates or workflows actively using the shared skills.
+        - Measured reduction in repeated setup, review, or coordination work.
+    technologies:
+      - Hermes Agent
+      - Reusable agent skills
+      - Railway domain rules
+    themes:
+      - AI enablement
+      - team leverage
+      - knowledge sharing
+      - workflow standardization
+      - railway domain knowledge
+    target_roles:
+      - Tech Lead
+      - Engineering Lead
+      - AI Operations
+      - Platform Engineer
+    public_safe: true
+    boundaries:
+      - Do not publish an exact current skill count without a dated inventory because the set changes over time.
+      - Do not imply every teammate actively adopted every shared skill without usage evidence.
+      - Do not disclose private skill content or confidential railway/project details.
+    sources:
+      - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
+      - direct_user_confirmation:2026-08-07
+    resume_bullets:
+      default: Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence/Jira updates. Created and shared reusable LILEE Systems and railway-rule skills for the team.
+      concise: Created and shared reusable Hermes Agent skills for LILEE Systems workflows and railway rules, turning individual methods into team capabilities.
+
   - id: lilee-timetabling
     title: Train timetabling platform
     role_id: lilee-full-stack-engineer
@@ -503,13 +548,16 @@ achievements:
     title: Faramund breakdown-recovery agent
     role_id: lilee-full-stack-engineer
     timeframe: 2024-05 to 2026-03
-    summary: Designed a 28-state FSM that coordinates breakdown recovery across cloud services and field operators.
+    summary: Built a testbed recovery agent that simulates a dispatcher, coordinates with a driver agent and wayside signals, guides failed vehicles back to the yard, and notifies the team without continuous human monitoring.
     facts:
       - Designed Faramund, the platform's breakdown-recovery agent.
+      - Faramund is an agent that simulates the dispatcher role in the testbed.
+      - The driver is modeled as a separate agent that communicates with Faramund in real time.
+      - Faramund controls and opens wayside signals in the testbed to guide a failed vehicle back to the yard.
       - Uses a 28-state FSM.
       - Orchestrates cloud services and field operators over WebSocket.
       - Replaced a testbed recovery model that required one person to monitor operations continuously, 24 hours a day.
-      - After the change, the testbed can automatically clear recovery conditions without operator approval.
+      - After the change, the testbed can clear recovery conditions automatically and notify the team without operator approval.
       - Owns DOM 10 recovery in the documented mission-ordering context, where recovery traffic is distinguished from normal dispatch and return-to-yard intent.
     metrics:
       confirmed:
@@ -526,6 +574,9 @@ achievements:
     technologies:
       - WebSocket
       - FSM design
+      - Agent-based simulation
+      - Wayside signaling
+      - Real-time communication
     themes:
       - workflow automation
       - incident recovery
@@ -539,12 +590,14 @@ achievements:
     public_safe: true
     boundaries:
       - This is testbed recovery automation and does not require operator approval; do not imply production deployment.
+      - Faramund and the driver are simulated operational roles; do not imply that Faramund replaces certified field-safety authority.
     sources:
       - kb://plans/2026-06-04-leo-faramund-dispatch-rules/plan.md
       - direct_user_confirmation:2026-08-04
+      - direct_user_confirmation:2026-08-07
     resume_bullets:
-      default: Designed Faramund, a 28-state breakdown-recovery FSM that automatically clears testbed recovery conditions over WebSocket, eliminating the need for continuous 24-hour human monitoring.
-      executive: Converted continuously monitored testbed recovery into an autonomous, observable 28-state workflow with explicit failure handling.
+      default: Built Faramund, a testbed recovery agent that acts as a dispatcher, communicates with a driver agent, opens wayside signals, and guides failed vehicles back to the yard. It clears incidents and notifies the team automatically, removing the need for continuous human monitoring.
+      executive: Automated testbed breakdown recovery and notification with dispatcher and driver agents, removing the need for continuous human monitoring.
 
   - id: lilee-seshat-go
     title: seshat-go MQTT recording and replay service
@@ -554,7 +607,8 @@ achievements:
     facts:
       - Built seshat-go from scratch.
       - The Go backend and React frontend PoC records configurable MQTT topics into PostgreSQL/TimescaleDB as raw JSONB with compression and retention policies.
-      - Its source snapshot states that it subscribes to all MQTT topics and supports ICD message types 1 through 19.
+      - Its source snapshot states that it subscribes to MQTT traffic and supports ICD message types 1 through 19.
+      - The current deployment records 19 MQTT topics.
       - Provides time-range/topic queries, payload-field filtering, multi-topic comparison, and track-map/state replay for historical incident analysis.
       - Makes cross-module incidents debuggable for the team.
       - Operates as an observer and is not a TAPAS runtime dependency or part of the operational control path.
@@ -564,12 +618,14 @@ achievements:
           value: types 1 through 19
           basis: Seshat source snapshot and Seshat 2.0 terminology
         - name: captured_mqtt_topics
-          value: 14 topics
+          value: 19 topics
+          basis: Direct user confirmation on 2026-08-07.
         - name: retention_period
           value: 14 days
+          basis: Retention policy chosen for the available 300 GB VM capacity.
         - name: storage_capacity_for_retention_window
           value: approximately 300 GB
-          basis: 300 GB is approximately full after 14 days
+          basis: The VM's available storage is approximately full after 14 days; this is a capacity constraint, not an impact metric.
       derived_estimates:
         - name: average_storage_growth
           value: approximately 21.4 GB/day
@@ -598,26 +654,29 @@ achievements:
     boundaries:
       - Current source states testbed traffic; do not imply production unless confirmed.
       - Seshat observes and analyzes MQTT traffic; it has no runtime authority over SS, JPS, MMS, WSS, ADS, or TriOps.
-      - ICD type range does not equal the exact number of actively captured MQTT topics.
+      - The 19 captured topics are a direct current-deployment count; keep this separate from the ICD message-type range.
       - The 21.4 GB/day figure is derived from storage capacity and retention, not a measured broker throughput value.
+      - The 14-day retention period and approximately 300 GB window reflect VM capacity, not service performance or business impact.
     sources:
       - kb://plans/2026-07-02-leo-seshat-spec/page-snapshot.md
       - kb://plans/2026-07-02-leo-seshat-spec/seshat-2.0-draft-v1.md
       - direct_user_confirmation:2026-08-04
+      - direct_user_confirmation:2026-08-07
     resume_bullets:
-      default: Built seshat-go, a Go + TimescaleDB service recording 14 MQTT topics across a 14-day, approximately 300 GB testbed history window, enabling engineers to replay module state and reconstruct cross-module incidents.
+      default: Built a Go and TimescaleDB service that records MQTT traffic and replays historical module state, helping engineers reconstruct incidents across services without reproducing them live.
       reliability: Built MQTT recording/replay infrastructure that lets engineers reconstruct cross-module incidents without relying on live reproduction.
 
   - id: lilee-playwright-jenkins
     title: Release-gated E2E CI pipeline and test-plan governance
     role_id: lilee-full-stack-engineer
     timeframe: 2024-05 to 2026-03
-    summary: Built the release-gated Playwright/Jenkins pipeline from scratch and governed a team-accumulated regression plan, while a team member implemented the test automation.
+    summary: Built the Jenkins release gate, reviewed and curated the team-authored E2E plan, and governed release quality while a teammate implemented the Playwright automation.
     facts:
-      - Built the Playwright/Jenkins release pipeline from scratch.
+      - Built the Jenkins release gate around the Playwright automation.
       - CI blocks image publishing when the suite fails.
       - Catches regressions before they reach QA.
-      - Team members accumulated the 86 test cases across releases; Preston reviewed and curated them into the test plan, and Lorenzo later implemented the automation.
+      - Team members continue to expand the regression suite; Preston reviews and curates the test plan, and Lorenzo implemented the automation.
+      - The suite contained 99 automated cases as of 2026-08-07 and is expected to exceed 100 in a later release; this count is volatile and should not be used in stable resume wording.
       - The suite runs after every release build.
       - During initial adoption, each build typically exposed one or two bugs; after about one month, findings became rare as developers began testing before pushing code.
       - A June 2026 SafeART release evidence set records 86 passed automated cases spanning timetable/service CRUD, conflict detection, audit, realtime vehicle/track/signal/conflict views, manual mode, cross-day handling, severity events, DOM, vehicle management, and user management.
@@ -626,6 +685,10 @@ achievements:
         - name: release_evidence_passed_automated_cases
           value: 86
           basis: live SafeART 0.20 release-note evidence summarized on 2026-06-25
+        - name: current_automated_case_count
+          value: 99
+          observed_at: 2026-08-07
+          volatility: changes frequently as the team expands the suite
         - name: initial_regressions_caught_per_build
           value: 1-2 bugs
           basis: typical result during initial adoption
@@ -651,13 +714,15 @@ achievements:
     public_safe: true
     boundaries:
       - The 86 cases were accumulated by team members and later automated by Lorenzo; Preston's contribution was pipeline creation, test review/curation, and quality-gate governance.
+      - The current case count changes frequently; omit it from stable resume wording and describe the maintained team regression suite instead.
     sources:
       - kb://plans/2026-06-25-leo-safeart-020-qa-decision-summary/status.md
       - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
       - direct_user_confirmation:2026-08-04
+      - direct_user_confirmation:2026-08-07
     resume_bullets:
-      default: Built a release-gated Playwright/Jenkins pipeline from scratch and governed a team-authored 86-case regression plan; the gate initially caught 1-2 bugs per build and helped establish pre-push developer testing, making later release findings rare within about a month.
-      concise: Built a release-gated Playwright/Jenkins pipeline and governed an 86-case team regression plan, blocking failed builds before QA.
+      default: Built the Jenkins release gate for teammate-implemented Playwright tests and governed the team-authored regression plan. The gate initially caught 1-2 bugs per build and helped establish pre-push developer testing, making later release findings rare within about a month.
+      concise: Built the Jenkins release gate for teammate-implemented Playwright tests and governed the team's growing regression plan, blocking failed builds before QA.
 
   - id: webim-knowledge-management
     title: Enterprise knowledge management with Azure AI
