@@ -60,7 +60,7 @@ skills_inventory:
           - Confluence/Jira governance
           - Candidate evaluation and tracking
           - Multi-profile agent operations
-          - Creation and team sharing of reusable LILEE Systems and railway-rule skills
+          - Creation and team sharing of reusable workflow and railway-rule skills
         sources:
           - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
           - direct_user_confirmation:2026-08-07
@@ -332,24 +332,24 @@ achievements:
       concise: Integrated Confluence, Jira, Discord, local scripts, and reusable domain skills into agent-based product-operations workflows for release planning, candidate review, KPI reporting, and documentation governance.
 
   - id: lilee-ai-team-skills
-    title: Shared Hermes skills for team engineering workflows
+    title: Shared workflow skills for team engineering
     role_id: lilee-tech-lead
     timeframe: 2026-04 to present
-    summary: Created and shared reusable Hermes Agent skills for LILEE Systems workflows and railway rules so the team could apply the same grounded procedures.
+    summary: Created and shared reusable workflow and railway-rule skills so the team could apply the same grounded procedures.
     facts:
-      - Created multiple reusable Hermes Agent skills for LILEE Systems engineering and product-operations workflows.
-      - Shared every skill under the LILEE Systems skill group with the team.
+      - Created multiple reusable Hermes Agent skills for engineering and product-operations workflows at LILEE Systems.
+      - Shared every reusable workflow skill in the LILEE Systems team skill group with the team.
       - Created and shared railway-rule skills that package domain rules for reuse by team members and agents.
       - The skills turn individual working methods into reusable team capabilities rather than one-off prompts.
     metrics:
       confirmed: []
       needs_followup:
-        - Current dated count of shared LILEE Systems and railway-rule skills.
+        - Current dated count of shared workflow and railway-rule skills.
         - Number of teammates or workflows actively using the shared skills.
         - Measured reduction in repeated setup, review, or coordination work.
     technologies:
       - Hermes Agent
-      - Reusable agent skills
+      - Workflow skills
       - Railway domain rules
     themes:
       - AI enablement
@@ -371,8 +371,8 @@ achievements:
       - kb://plans/2026-07-07-leo-lilee-tapas-hermes-resume-report/report.md
       - direct_user_confirmation:2026-08-07
     resume_bullets:
-      default: Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence/Jira updates. Created and shared reusable LILEE Systems and railway-rule skills for the team.
-      concise: Created and shared reusable Hermes Agent skills for LILEE Systems workflows and railway rules, turning individual methods into team capabilities.
+      default: Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence/Jira updates. Created and shared reusable workflow and railway-rule skills with the team.
+      concise: Created and shared reusable workflow and railway-rule skills with the team, turning individual methods into team capabilities.
 
   - id: lilee-timetabling
     title: Train timetabling platform

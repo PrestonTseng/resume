@@ -27,7 +27,7 @@ cv:
         location: New Taipei City, Taiwan
         highlights:
           - Lead a 3-5 engineer cloud team responsible for timetabling, mission management, safety-control workflows, and observability. Own architecture across services and work with the CEO on roadmaps and KPIs.
-          - Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence and Jira updates. Created and shared reusable LILEE Systems and railway-rule skills for the team.
+          - Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence and Jira updates. Created and shared reusable workflow and railway-rule skills with the team.
           - Built a human-reviewed, agent-assisted hiring workflow used for 13 candidates. It replaced repeated PowerPoint and Excel handoffs with traceable Confluence records and reduced HR coordination work.
       - company: LILEE Systems
         position: Full Stack Engineer
