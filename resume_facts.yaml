@@ -8,14 +8,14 @@ candidate:
     linkedin: https://www.linkedin.com/in/prestontseng
 
 positioning:
-  primary: Tech Lead / full-stack platform engineer building safety-critical cloud systems and AI-assisted engineering operations for autonomous rail transit.
+  primary: Tech Lead / full-stack platform engineer building safety-critical cloud systems and AI-assisted engineering operations for autonomous vehicles that use railway standards.
   secondary:
     - Senior Full Stack Engineer
     - Platform Engineer
     - Engineering Lead
     - AI-assisted Operations / Enterprise Automation Engineer
   differentiators:
-    - Owns safety-critical autonomous rail cloud systems while remaining hands-on.
+    - Owns safety-critical autonomous vehicle cloud systems while remaining hands-on.
     - Converts ambiguous, cross-functional, high-risk workflows into traceable, reviewable, and automated systems.
     - Combines transportation engineering domain knowledge, enterprise AI experience, and full-stack/platform execution.
 
@@ -91,7 +91,7 @@ skills_inventory:
     - E2E automation
     - MQTT replay
   domains:
-    - Autonomous rail systems
+    - Autonomous vehicle systems
     - Safety-critical cloud workflows
     - Timetabling
     - Mission execution
@@ -121,7 +121,7 @@ roles:
     start_date: 2024-05
     end_date: 2026-03
     location: New Taipei City, Taiwan
-    summary: Built autonomous rail platform capabilities including timetabling, Safety Server architecture, breakdown recovery, MQTT replay, and CI quality gates.
+    summary: Built autonomous vehicle platform capabilities based on railway operating standards, including timetabling, Safety Server architecture, breakdown recovery, MQTT replay, and CI quality gates.
   - id: webim-ai-technical-lead
     company: WeBIM Services
     title: AI Technical Lead
@@ -175,7 +175,7 @@ achievements:
       - kb://plans/2026-07-28-leo-tech-lead-kpi-redesign/kpi-proposal.md
     resume_bullets:
       default: Lead a 3-5 person cloud team across timetabling, mission management, safety control, and observability services, owning cross-service architecture and roadmap execution.
-      tech_lead: Lead a 3-5 engineer cloud team, drive architecture decisions across the autonomous-rail cloud platform, and partner with executive stakeholders on roadmap and KPI planning.
+      tech_lead: Lead a 3-5 engineer cloud team, drive architecture decisions across the autonomous-vehicle cloud platform, and partner with executive stakeholders on roadmap and KPI planning.
 
   - id: lilee-ai-interview-pipeline
     title: Agent-assisted interview pipeline
@@ -378,7 +378,7 @@ achievements:
     title: Train timetabling platform
     role_id: lilee-full-stack-engineer
     timeframe: 2024-05 to 2026-03
-    summary: Built train timetabling stack from scratch for the autonomous rail platform.
+    summary: Built a railway-standard timetabling stack from scratch for the autonomous vehicle platform.
     facts:
       - Built the platform's train timetabling stack from scratch.
       - Full-day conflict detection runs in 1-3 seconds.
@@ -462,7 +462,7 @@ achievements:
       - D3.js
     themes:
       - scheduling algorithms
-      - autonomous rail
+      - autonomous vehicles
       - platform engineering
       - real-time visualization
       - operations planning
@@ -484,7 +484,7 @@ achievements:
     resume_bullets:
       default: Built the platform's train timetabling stack from scratch, including full-day conflict detection in 1-3 seconds, conflict-free schedule generation from fleet, demand, and route inputs, and millisecond-level visualization of track state, vehicle positions, signals, and conflict root causes.
       scale: Built a testbed timetabling stack that has run a recurring 1,351-service weekend schedule over a 02:00-23:30 daily horizon for several months, detecting full-day conflicts in 1-3 seconds against a topology snapshot containing 34 routes, 28 blocks, and 51 sub-blocks.
-      platform: Built train timetabling from scratch, aligning scheduling algorithms, route constraints, and operator-facing visualization into a core autonomous-rail planning capability.
+      platform: Built railway-standard timetabling from scratch, aligning scheduling algorithms, route constraints, and operator-facing visualization into a core autonomous-vehicle planning capability.
 
   - id: lilee-safety-server
     title: Safety Server stateful architecture
@@ -581,7 +581,7 @@ achievements:
       - workflow automation
       - incident recovery
       - human-in-the-loop operations
-      - autonomous rail
+      - autonomous vehicles
     target_roles:
       - Tech Lead
       - Platform Engineer
