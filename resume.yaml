@@ -7,7 +7,7 @@ cv:
       username: prestontseng
   sections:
     professional_summary:
-      - Hands-on Tech Lead with 7+ years of experience building cloud and enterprise systems. Focused on cloud platforms for safety-critical autonomous rail operations since 2024. Lead a 3-5 engineer team, own system architecture, and manage roadmap delivery. Build systems that are easier to monitor, test, and automate.
+      - Hands-on Tech Lead with 7+ years of experience building cloud and enterprise systems. Focused on cloud platforms for safety-critical autonomous vehicle operations since 2024. Lead a 3-5 engineer team, own system architecture, and manage roadmap delivery. Build systems that are easier to monitor, test, and automate.
     technical_skills:
       - label: Languages
         details: Python, TypeScript, Go, C#
@@ -18,7 +18,7 @@ cv:
       - label: Platform & Quality
         details: Distributed systems, Docker, Jenkins, Azure DevOps, Playwright, Grafana, CI/CD, E2E automation, event recording and replay
       - label: AI & Domains
-        details: Hermes Agent, Azure AI Service, OpenAI GPT, Semantic Kernel, agent-assisted workflows, safety-critical autonomous rail, timetabling, mission execution, FSM design, BIM automation
+        details: Hermes Agent, Azure AI Service, OpenAI GPT, Semantic Kernel, agent-assisted workflows, safety-critical autonomous vehicles, railway-standard operations, timetabling, mission execution, FSM design, BIM automation
     experience:
       - company: LILEE Systems
         position: Tech Lead
@@ -27,7 +27,7 @@ cv:
         location: New Taipei City, Taiwan
         highlights:
           - Lead a 3-5 engineer cloud team responsible for timetabling, mission management, safety-control workflows, and observability. Own architecture across services and work with the CEO on roadmaps and KPIs.
-          - Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence and Jira updates. Created and shared reusable LILEE Systems and railway-rule skills for the team.
+          - Built Hermes Agent workflows that turn engineering specifications into delivery plans and verified Confluence and Jira updates. Created and shared reusable workflow and railway-rule skills with the team.
           - Built a human-reviewed, agent-assisted hiring workflow used for 13 candidates. It replaced repeated PowerPoint and Excel handoffs with traceable Confluence records and reduced HR coordination work.
       - company: LILEE Systems
         position: Full Stack Engineer
