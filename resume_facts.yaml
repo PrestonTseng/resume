@@ -381,6 +381,11 @@ achievements:
     summary: Built train timetabling stack from scratch for the autonomous rail platform.
     facts:
       - Built the platform's train timetabling stack from scratch.
+      - Began contributing production functionality during his second week at LILEE.
+      - Owned the initial timetable-management capability across data-model design, CRUD APIs and the backend API contract, frontend administration, and a live timetable-status page where state changes appeared immediately.
+      - Researched the timetable-management design, wrote a design document, passed review, and then implemented it.
+      - The original timetable data model and API have not required refactoring or adjustment so far.
+      - Later station-centric and vehicle-centric timetable views reused the original API.
       - Full-day conflict detection runs in 1-3 seconds.
       - Generates conflict-free schedules from fleet, demand, and route inputs.
       - Provides millisecond-precision visualization of track state, vehicle positions, signals, and conflict root causes.
@@ -473,6 +478,10 @@ achievements:
       - Transportation Technology Engineer
     public_safe: true
     boundaries:
+      - The second week marks the onset of production-functionality contributions; do not imply that the entire timetable stack or platform was completed within two weeks.
+      - The lack of refactoring or adjustment is observed history through the direct confirmation date, not a guarantee about future changes.
+      - Immediate timetable-status page updates do not establish a specific real-time transport technology.
+      - Do not infer production deployment of the full platform or solo authorship beyond Preston's stated responsibility for the initial timetable-management capability.
       - Do not imply safety certification or final field enforcement unless explicitly confirmed.
       - Thalos has no independent Station entity; the three-station count is inferred by grouping six passenger platform-track names.
       - The three track IDs include the AV yard track; do not describe them as three passenger mainline tracks.
@@ -480,9 +489,10 @@ achievements:
     sources:
       - kb://plans/2026-06-25-leo-safeart-020-section-drafts/reviewable-drafts.md
       - direct_user_confirmation:2026-08-04
+      - direct_user_confirmation:2026-08-23
       - direct_channel_report:2026-08-04:leo_thalos_const_summary
     resume_bullets:
-      default: Built the platform's train timetabling stack from scratch, including full-day conflict detection in 1-3 seconds, conflict-free schedule generation from fleet, demand, and route inputs, and millisecond-level visualization of track state, vehicle positions, signals, and conflict root causes.
+      default: Designed and built the timetable data model, APIs, administration, and live status views. The reviewed API stayed stable for later station- and vehicle-centric views, supporting a recurring 1,351-service weekend testbed schedule with 1–3-second full-day conflict detection.
       scale: Built a testbed timetabling stack that has run a recurring 1,351-service weekend schedule over a 02:00-23:30 daily horizon for several months, detecting full-day conflicts in 1-3 seconds against a topology snapshot containing 34 routes, 28 blocks, and 51 sub-blocks.
       platform: Built train timetabling from scratch, aligning scheduling algorithms, route constraints, and operator-facing visualization into a core autonomous-rail planning capability.
 
