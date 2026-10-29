@@ -1068,16 +1068,18 @@ personal_projects:
   - id: personal-homelab
     category: personal_infrastructure
     title: Personal homelab
-    purpose: Personal connectivity, storage redundancy and recovery, home automation and selected-domain access protection.
+    purpose: Personal connectivity and networking equipment configuration, storage redundancy and recovery, home automation and selected-domain access protection.
     evidence_status: user_confirmed_personal_use_and_experience
     sources:
       - reference: direct_user_confirmation:2026-10-29
         description: Firsthand confirmation of six homelab components and Cloudflare Zero Trust protection of selected domains.
       - reference: direct_user_confirmation:2026-10-29:homelab-02
         description: Firsthand confirmation of NAS configuration and rationale, off-site redundancy, prior drive failure and data recovery, and home automation integrations.
+      - reference: direct_user_confirmation:2026-10-29:networking-03
+        description: Firsthand confirmation of networking equipment configuration experience, IP/port management and bridge mode on selected devices; current internet-access method is environment context only.
     personal_contribution:
       status: confirmed_personal_use_and_experience
-      scope: Uses the six listed components; confirms Synology RAID10 and its design rationale, off-site data redundancy, experience performing data recovery after a single-drive failure, and Home Assistant integrations across appliance brands and with Apple Home.
+      scope: Uses the original six components; confirms Synology RAID10 and its design rationale, off-site data redundancy, experience performing data recovery after a single-drive failure, Home Assistant integrations across appliance brands and with Apple Home, and networking equipment configuration experience including IP/port management and bridge mode on selected devices.
       needs_followup: Installation authorship, maintenance period and any custom automation or integration coding remain unconfirmed.
     deployment_stage:
       value: personal_use_confirmed
@@ -1128,9 +1130,19 @@ personal_projects:
           - No particular appliance brands or counts, protocols, custom integration coding or universal device coverage are established.
         followups:
           - For authorship claims, confirm Preston's own configuration or coding scope; specific protocols and integration methods remain unspecified.
+      - id: homelab-networking-equipment
+        technology: routers/switches
+        evidence_status: user_confirmed_configuration_experience
+        sources: [direct_user_confirmation:2026-10-29:networking-03]
+        scope: Experience configuring networking equipment in a personal homelab, including routers and switches; IP/port management; bridge mode on selected devices only.
+        environment_context:
+          current_internet_access_method: PPPoE
+        boundaries:
+          - The internet-access method is environment context only, not a standalone skill, achievement or protocol implementation claim.
+          - No specific IP/port-management mechanism, device identities or counts, brands, models, topology, universal bridge mode or enterprise networking expertise is established.
     public_safe: true
     eligible_for_resume: true
-    eligibility_scope: Bounded user-confirmed personal use, NAS configuration and design rationale, redundancy and recovery experience, and home automation integrations only; not measured outcomes, general infrastructure ownership or publication authorization.
+    eligibility_scope: Bounded user-confirmed personal use, NAS configuration and design rationale, redundancy and recovery experience, home automation integrations, and networking equipment configuration including IP/port management and selected-device bridge mode only; not measured outcomes, general infrastructure ownership or publication authorization.
     boundaries:
       - User confirmation supports the stated use and experience without a fresh independent runtime, configuration or security audit.
       - No all-domain protection, MFA, SSO, device posture, enterprise rollout or long-term uptime claim is established.
@@ -1138,5 +1150,5 @@ personal_projects:
       - AWS, GCP, EC2, Amazon S3 and Cloud Run use remain unknown; Cloudflare and other tooling do not establish their use.
       - Public summaries exclude actual domains, IP addresses, topology, backup locations, appliance identifiers, account identifiers, credentials and household routines.
     followups:
-      - For broader ownership claims, confirm what Preston personally installed, configured, automated or maintained and the relevant dates.
+      - Beyond the specifically confirmed NAS and networking configuration experience, confirm broader installation, configuration, automation or maintenance ownership and the relevant dates before making broader claims.
       - For measured reliability or recovery outcomes, obtain dated public-safe evidence; direct-confirmed recovery experience alone does not establish performance or disaster-recovery guarantees.
