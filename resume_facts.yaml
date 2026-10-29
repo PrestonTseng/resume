@@ -1063,3 +1063,163 @@ followups:
   - id: lilee-agent-workflow-adoption
     achievement_id: lilee-ai-doc-governance
     question: How many Confluence/Jira artifacts, specs, delivery maps, candidates, or KPI reports have used the agent-assisted workflows?
+
+personal_projects:
+  - id: personal-martial-arts-video-log
+    category: personal_project_candidate
+    title: Martial arts video archive
+    purpose: Self-hosted video archiving, tag filtering, organization membership, authorized upload and playback.
+    technologies:
+      - Next.js
+      - React
+      - TypeScript
+      - Node.js
+      - Auth.js
+      - Drizzle ORM
+      - PostgreSQL
+      - tusd / TUS
+      - FFmpeg
+      - HLS / HLS.js
+      - Docker Compose
+    evidence_status: documented_project_local_application_acceptance
+    sources:
+      - reference: project_evidence:2026-09-24:media-01
+        description: Dated product decisions, dependency manifests, application service definition and local acceptance report.
+      - reference: project_evidence:2026-09-23:media-02
+        description: Application storage and external edge responsibility decision.
+    personal_contribution:
+      status: unresolved
+      confirmed_context: Preston approved the product, specification, architecture and implementation direction.
+      needs_followup: Confirm his bounded design, coding, review and maintenance contributions separately from AI-assisted implementation and other contributors.
+    deployment_stage:
+      value: local_application_poc_accepted
+      as_of: '2026-09-24'
+      needs_followup: Current deployment and use are unknown; historical local acceptance does not establish current production operation.
+    capabilities:
+      evidence_boundary: Documented project-level local acceptance with generated fixtures, not personal authorship or real-user production evidence.
+      documented:
+        - Organization and membership authorization, tag filtering, protected playback and access revocation.
+        - Resumable upload, background FFmpeg transcoding and single-rendition HLS publication.
+        - Same-video upload-to-worker-to-authorized-playback flow, worker restart and lease handling, and fail-closed storage checks.
+    public_safe: true
+    eligible_for_resume: false
+    boundaries:
+      - Project technologies are not evidence of Preston's professional proficiency or personal coding authorship.
+      - No personal accomplishment, sole authorship, production ownership, adoption, capacity or business outcome is established.
+      - Local acceptance used generated fixtures; synthetic metadata is not evidence of actual users or videos in service.
+      - Public edge operation, real LINE consent and callback, real Mac or NAS integration, backup restoration, capacity and production hardening were outside acceptance.
+      - Configurable host media storage is separate from external edge and NAS backup responsibilities; NAS primary storage is not established.
+      - Recorded acceptance does not imply an independent full-stack browser and runtime rerun by every reviewer.
+      - AWS, GCP, EC2, Amazon S3 and Cloud Run use remain unknown; other tools and storage interfaces do not establish their use.
+    followups:
+      - Confirm personal participation dates and the contribution split, including AI assistance, before selecting any resume achievement.
+      - Confirm current local or public deployment, maintenance responsibility and any dated real-use outcome without disclosing private infrastructure or media.
+
+  - id: personal-unified-trading-research-platform
+    category: personal_project_candidate
+    title: Unified trading research platform
+    purpose: Research-only platform for futures and options data, formula validation and publication, reproducible results and background backtests.
+    technologies:
+      - React
+      - TypeScript
+      - Vite
+      - Tailwind CSS
+      - Python
+      - FastAPI
+      - PostgreSQL / TimescaleDB
+      - MinIO
+      - Docker Compose
+      - Playwright
+    evidence_status: documented_project_corrected_local_poc_acceptance
+    sources:
+      - reference: project_evidence:2026-10-16:research-01
+        description: Product decisions and corrected local proof-of-concept acceptance record.
+      - reference: project_evidence:2026-10-29:research-02
+        description: Dependency manifests, application source and runtime documentation at the recorded corrected revision.
+    personal_contribution:
+      status: unresolved
+      confirmed_context: Preston set requirements, approved specifications and decisions, reviewed the product and identified usability gaps.
+      needs_followup: Confirm his requirements, design, coding, review and maintenance scope separately from AI-assisted implementation and other contributors.
+    deployment_stage:
+      value: corrected_local_poc_accepted_topic_branch_published
+      as_of: '2026-10-16'
+      needs_followup: Correction merge, deployment and current use are unknown; topic-branch publication is not production deployment.
+    capabilities:
+      evidence_boundary: Documented research project and corrected local acceptance, not personal code or test authorship or current production proof.
+      documented:
+        - Formula validation and publication UI, immutable dataset snapshots and point-in-time evidence modes.
+        - FastAPI application, background backtest jobs and attempts, explicit manual recovery and traceable results.
+        - Corrected local login and routed workspaces accepted at a specific candidate revision.
+    public_safe: true
+    eligible_for_resume: false
+    boundaries:
+      - Project technologies and aggregate implementation or test evidence do not establish Preston's professional proficiency or personal authorship.
+      - Earlier web acceptance was superseded after human review; only corrected local acceptance supports the recorded stage.
+      - No live data-provider or Discord integration, production identity integration or production recovery guarantee is established.
+      - Research-only scope does not establish broker integration, order execution, position sizing, profitable trading or commercial adoption.
+      - Trading Research Engine, SMC and options architecture are related lineage, not additional independent accomplishments; completed legacy migration is not established.
+      - AWS, GCP, EC2, Amazon S3 and Cloud Run use remain unknown; MinIO, Compose, Cloudflare and Azure tooling do not establish their use.
+    followups:
+      - Confirm personal participation dates and contribution attribution, including AI assistance, before selecting any resume achievement.
+      - Confirm correction merge and actual deployment or use after the recorded local acceptance.
+      - Require distinct contribution and outcome evidence before recording any predecessor as a separate accomplishment.
+
+  - id: personal-homelab
+    category: personal_infrastructure
+    title: Personal homelab
+    purpose: Personal use of connectivity, storage, home automation and selected-domain access protection tools.
+    evidence_status: user_confirmed_personal_use
+    sources:
+      - reference: direct_user_confirmation:2026-10-29
+        description: Firsthand confirmation of six homelab components and Cloudflare Zero Trust protection of selected domains.
+    personal_contribution:
+      status: confirmed_personal_use
+      scope: Uses Cloudflare DDNS, Cloudflare Tunnel, Synology NAS, WireGuard VPN and Home Assistant; Cloudflare Zero Trust protects selected domains.
+      needs_followup: Installation and configuration authorship, maintenance period and operational responsibility are not established.
+    deployment_stage:
+      value: personal_use_confirmed
+      as_of: '2026-10-29'
+      needs_followup: Installation dates, maintenance duration, policy details and recovery verification remain unknown.
+    components:
+      - id: homelab-cloudflare-ddns
+        technology: Cloudflare DDNS
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no measured DNS automation reliability or configuration authorship claim.
+      - id: homelab-cloudflare-tunnel
+        technology: Cloudflare Tunnel
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no all-service ingress, throughput or installation authorship claim.
+      - id: homelab-cloudflare-zero-trust
+        technology: Cloudflare Zero Trust
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Protects selected domains only; no all-domain coverage, MFA, SSO, device posture or enterprise rollout claim.
+      - id: homelab-synology-nas
+        technology: Synology NAS
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no backup restoration success, capacity or maintenance achievement claim.
+      - id: homelab-wireguard-vpn
+        technology: WireGuard VPN
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no fresh end-to-end connectivity audit or configuration authorship claim.
+      - id: homelab-home-assistant
+        technology: Home Assistant
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no specific integration or custom automation authorship claim.
+    public_safe: true
+    eligible_for_resume: true
+    eligibility_scope: Bounded personal-use statement only, not a built, operated, configured or maintained infrastructure achievement or publication authorization.
+    boundaries:
+      - User confirmation supports personal use without a fresh runtime, configuration or security audit.
+      - No all-domain protection, MFA, SSO, device posture, enterprise rollout, long-term uptime or backup restoration claim.
+      - Component evidence stays within this project, not a flat professional-proficiency claim.
+      - AWS, GCP, EC2, Amazon S3 and Cloud Run use remain unknown; Cloudflare and other tooling do not establish their use.
+      - Public summaries exclude actual domains, IP addresses, topology, account identifiers, credentials and household routines.
+    followups:
+      - For stronger claims only, confirm what Preston personally configured, automated or maintained and the relevant dates.
+      - For outcome claims only, obtain dated public-safe reliability or recovery evidence without secrets or private infrastructure details.
