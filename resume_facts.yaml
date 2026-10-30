@@ -1063,3 +1063,92 @@ followups:
   - id: lilee-agent-workflow-adoption
     achievement_id: lilee-ai-doc-governance
     question: How many Confluence/Jira artifacts, specs, delivery maps, candidates, or KPI reports have used the agent-assisted workflows?
+
+personal_projects:
+  - id: personal-homelab
+    category: personal_infrastructure
+    title: Personal homelab
+    purpose: Personal connectivity and networking equipment configuration, storage redundancy and recovery, home automation and selected-domain access protection.
+    evidence_status: user_confirmed_personal_use_and_experience
+    sources:
+      - reference: direct_user_confirmation:2026-10-29
+        description: Firsthand confirmation of six homelab components and Cloudflare Zero Trust protection of selected domains.
+      - reference: direct_user_confirmation:2026-10-29:homelab-02
+        description: Firsthand confirmation of NAS configuration and rationale, off-site redundancy, prior drive failure and data recovery, and home automation integrations.
+      - reference: direct_user_confirmation:2026-10-29:networking-03
+        description: Firsthand confirmation of networking equipment configuration experience, IP/port management and bridge mode on selected devices; current internet-access method is environment context only.
+    personal_contribution:
+      status: confirmed_personal_use_and_experience
+      scope: Uses the original six components; confirms Synology RAID10 and its design rationale, off-site data redundancy, experience performing data recovery after a single-drive failure, Home Assistant integrations across appliance brands and with Apple Home, and networking equipment configuration experience including IP/port management and bridge mode on selected devices.
+      needs_followup: Installation authorship, maintenance period and any custom automation or integration coding remain unconfirmed.
+    deployment_stage:
+      value: personal_use_confirmed
+      as_of: '2026-10-29'
+      needs_followup: Installation and recovery dates, maintenance duration and independently verified operational outcomes remain unknown.
+    components:
+      - id: homelab-cloudflare-ddns
+        technology: Cloudflare DDNS
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no measured DNS automation reliability or configuration authorship claim.
+      - id: homelab-cloudflare-tunnel
+        technology: Cloudflare Tunnel
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no all-service ingress, throughput or installation authorship claim.
+      - id: homelab-cloudflare-zero-trust
+        technology: Cloudflare Zero Trust
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Protects selected domains only; no all-domain coverage, MFA, SSO, device posture or enterprise rollout claim.
+      - id: homelab-synology-nas
+        technology: Synology NAS
+        evidence_status: user_confirmed_personal_use_and_experience
+        sources: [direct_user_confirmation:2026-10-29, direct_user_confirmation:2026-10-29:homelab-02]
+        scope: Personal NAS use with RAID10, off-site data redundancy and experience performing data recovery after a previous single-hard-drive failure.
+        confirmed_details:
+          - RAID10 was chosen to balance read performance and disk-failure protection; this is the design rationale, not a measured performance gain.
+          - Off-site data redundancy is in place, separate from RAID10 disk redundancy.
+          - Data recovery was performed after a single-hard-drive failure; the recovery method and whether the off-site copy was used are unspecified.
+        boundaries:
+          - No benchmark, capacity, recovery duration, completeness or zero-data-loss claim is established.
+          - Neither redundancy measure establishes a particular backup policy or an independently tested disaster-recovery guarantee.
+        followups:
+          - For more specific recovery claims, confirm the date, method, scope and outcome without disclosing private storage details.
+          - Off-site replication or backup method, schedule and restore testing from that copy remain unspecified.
+      - id: homelab-wireguard-vpn
+        technology: WireGuard VPN
+        evidence_status: user_confirmed_personal_use
+        sources: [direct_user_confirmation:2026-10-29]
+        scope: Personal use only; no fresh end-to-end connectivity audit or configuration authorship claim.
+      - id: homelab-home-assistant
+        technology: Home Assistant
+        evidence_status: user_confirmed_personal_use_and_integrations
+        sources: [direct_user_confirmation:2026-10-29, direct_user_confirmation:2026-10-29:homelab-02]
+        scope: Personal use integrating appliances from multiple brands and connecting with Apple Home.
+        boundaries:
+          - No particular appliance brands or counts, protocols, custom integration coding or universal device coverage are established.
+        followups:
+          - For authorship claims, confirm Preston's own configuration or coding scope; specific protocols and integration methods remain unspecified.
+      - id: homelab-networking-equipment
+        technology: routers/switches
+        evidence_status: user_confirmed_configuration_experience
+        sources: [direct_user_confirmation:2026-10-29:networking-03]
+        scope: Experience configuring networking equipment in a personal homelab, including routers and switches; IP/port management; bridge mode on selected devices only.
+        environment_context:
+          current_internet_access_method: PPPoE
+        boundaries:
+          - The internet-access method is environment context only, not a standalone skill, achievement or protocol implementation claim.
+          - No specific IP/port-management mechanism, device identities or counts, brands, models, topology, universal bridge mode or enterprise networking expertise is established.
+    public_safe: true
+    eligible_for_resume: true
+    eligibility_scope: Bounded user-confirmed personal use, NAS configuration and design rationale, redundancy and recovery experience, home automation integrations, and networking equipment configuration including IP/port management and selected-device bridge mode only; not measured outcomes, general infrastructure ownership or publication authorization.
+    boundaries:
+      - User confirmation supports the stated use and experience without a fresh independent runtime, configuration or security audit.
+      - No all-domain protection, MFA, SSO, device posture, enterprise rollout or long-term uptime claim is established.
+      - Component evidence stays within this project, not a flat professional-proficiency claim.
+      - AWS, GCP, EC2, Amazon S3 and Cloud Run use remain unknown; Cloudflare and other tooling do not establish their use.
+      - Public summaries exclude actual domains, IP addresses, topology, backup locations, appliance identifiers, account identifiers, credentials and household routines.
+    followups:
+      - Beyond the specifically confirmed NAS and networking configuration experience, confirm broader installation, configuration, automation or maintenance ownership and the relevant dates before making broader claims.
+      - For measured reliability or recovery outcomes, obtain dated public-safe evidence; direct-confirmed recovery experience alone does not establish performance or disaster-recovery guarantees.
